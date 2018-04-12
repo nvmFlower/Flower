@@ -1,4 +1,4 @@
-<% provide :title, t("cart.role") %>
+<% provide :title, t(".role") %>
 <div id="fh5co-product">
   <div class="container">
     <div class="row animate-box pad">
@@ -19,7 +19,7 @@
             <tbody>
               <tr>
                 <td>
-                  <%= link_to image_tag("l1.jpg", class: "img-pr text-center"), details_path %>
+
                 </td>
                 <td>Hoa Lá</td>
                 <td>2</td>
@@ -38,22 +38,7 @@
           </table>
         </div>
       </div>
-      <div class="col-md-12 ">
-        <div class="container">
-          <%= form_for @user, url: root_path do |f| %>
-          <h3 class="title-cart border-bot"><%= t ".info" %></h3>
-          <div class="col-md-4 col-sm-6">
-            <%= image_tag "banana.jpg", alt: "w", class: "img-info" %>
-          </div>
-          <div class="col-md-6 col-sm-4">
-            <p class="item-info">Lai Bá Vĩ</p>
-            <p class="item-info"><%= t ".email" %>: 017laibavi.wts@gmail.com </p>
-            <p class="item-info"><%= t ".address" %>: Số 54 ngõ 125 Cầu Thang Máy , Cầu Giấy, Hà Nội </p>
-            <p>Tổng tiền: 40.000</p>
-          <%= f.submit t(".pay"), class: "btn btn-primary" %>
-          </div>
-        </div>
-      </div>
+
       <% end %>
     </div>
 

@@ -59,17 +59,21 @@
               <span><small>0</small><i class="icon-shopping-cart"></i></span>
               <% end %>
             </li>
-            <li class="user dropdown">
-              <%= link_to "#", class: "dropdown-toggle", id: "dropdownMenuButton", data: {toggle: "dropdown"} do %>
-              <span><i class="icon-user"></i></span>
-              <% end %>
-              <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
-                <li><%= link_to t(".profile"), profile_path %></li>
-                <li>
-                  <%= link_to t(".log-out"), login_path %>
-                </li>
-              </ul>
-            </li>
+            <% if logged_in? || %>
+              <li class="menu dropdown">
+                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+                  <span><i class="icon-user"></i></span>
+                <% end %>
+                <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
+                  <li><%= link_to t(".profile"), current_user %></li>
+                  <li>
+                    <%= link_to t(".log-out"), logout_path, method: :delete %>
+                  </li>
+                </ul>
+              </li>
+            <% else %>
+              <%= link_to t("login"), login_path %>
+            <% end %>
           </ul>
         </div>
       </div>
