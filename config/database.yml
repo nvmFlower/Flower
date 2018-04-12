@@ -14,19 +14,19 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: van.minh
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: WebWatch_development
+  database: Flower_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: WebWatch_test
+  database: Flower_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: WebWatch_production
-  username: WebWatch
-  password: <%= ENV['WEBWATCH_DATABASE_PASSWORD'] %>
+  database: Flower_production
+  username: Flower
+  password: <%= ENV['Flower_DATABASE_PASSWORD'] %>
