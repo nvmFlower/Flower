@@ -6,8 +6,13 @@ require "rails/all"
 # you"ve limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module WebWatch
+module Flower
   class Application < Rails::Application
     config.load_defaults 5.1
+
+    config.generators do |g|
+      g.test_framework false
+      g.assets false
+    end
   end
 end
