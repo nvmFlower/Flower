@@ -44,6 +44,10 @@
   position: relative;
 }
 
+.product{
+  position: relative;
+}
+
 .img-product{
   position: absolute !important;
   left: 0;
@@ -76,6 +80,10 @@
   padding: 50px 30px !important;
 }
 
+.pad{
+  padding: 50px 30px !important;
+}
+
 .border-bot{
   border-bottom: 1px solid $black_50;
   padding-bottom: 7px;
@@ -88,6 +96,10 @@
   a{
     float: right;
   }
+}
+
+.item-info{
+  margin-bottom: 15px;
 }
 
 .item-info{
@@ -124,6 +136,10 @@
   color: $selective_yellow;
 }
 
+.icon-star2{
+  color: $selective_yellow;
+}
+
 .content{
   padding: 0 10px 100px 10px;
 
@@ -138,6 +154,13 @@ th{
   font-weight: 400 !important;
 }
 
+td{
+  vertical-align: middle !important;
+}
+
+th{
+  font-weight: 400 !important;
+}
 td{
   vertical-align: middle !important;
 }

@@ -5,6 +5,9 @@ class PostsController < ApplicationController
   def index
   end
 
+  def listpost
+  end
+
   def post
   end
 end

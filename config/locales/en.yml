@@ -98,7 +98,6 @@ en:
       feedback: "Ratting"
       call: "The Flower"
       add: "Add to cart"
-
       content-call: "Funness and happiness"
 
     contacts:
@@ -124,10 +123,36 @@ en:
     index:
       list: "List of articles"
       more: "More info"
-    post:
-      title: "Flower"
-
-  products:
-    sale: "Sale"
 
   contacts: "Contact"
+
+  users:
+    show:
+      unpay: "Chưa nhận hàng"
+      inpay: "Đã nhận hàng"
+      email: "Email"
+      address: "Address"
+      number-phone: "Số điện thoại"
+      img: "Ảnh"
+      name: "Tên"
+      many: "Số lượng"
+      price: "Gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+  cart:
+    add: "Thêm vào giỏ hàng"
+    img: "Hình ảnh"
+    name: "Tên sản phẩm"
+    many: "Số lượng"
+    price: "Đơn gía"
+    like: "Đánh gía"
+    time: "Thời gian đặt"
+    status: "Trạng thái"
+    unpay: "Chưa nhận hàng"
+    pay: "Đã nhận hàng"
+
+  show:
+    email: "Email"
+    address: "Address"
+    number-phone: "Số điện thoại"
