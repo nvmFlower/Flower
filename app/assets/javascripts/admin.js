@@ -1,0 +1,15 @@
+//= require jquery3
+//= require rails-ujs
+//= require jquery.min
+//= require bootstrap.bundle.min
+//= require jquery.easing.min
+//= require Chart.min
+//= require jquery.dataTables
+//= require dataTables.bootstrap4
+//= require sb-admin-datatables.min
+//= require sb-admin-charts.min
+//= require sb-admin.min
+//= require turbolinks
+//= require popper
+//= require jquery_ujs
+//= require bootstrap-sprockets
