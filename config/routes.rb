@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get "/admin", to: "admin/home#index"
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  get "/login", to: "session#new"
+  post "/login", to: "session#create"
+  get "/logout", to: "session#new"
+  delete "/logout", to: "session#destroy"
+
   root "pages#index"
   get "/occasions", to: "pages#topic"
   get "/contacts", to: "pages#contacts"
@@ -11,13 +19,11 @@ Rails.application.routes.draw do
   get "/list_post", to: "posts#index"
   get "/list_post/post", to: "posts#post"
   get "/profile", to: "users#show"
-  get "login", to: "session#new"
+  resources :users
+  resources :sessions
 
   namespace :admin do
     resources :home, only: [:index]
     resources :products, only: [:index]
-  end
-  namespace :login do
-    resources :sessionsadmin
   end
 end

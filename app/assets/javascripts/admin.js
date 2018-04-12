@@ -10,6 +10,5 @@
 //= require sb-admin-charts.min
 //= require sb-admin.min
 //= require turbolinks
-//= require popper
 //= require jquery_ujs
 //= require bootstrap-sprockets
