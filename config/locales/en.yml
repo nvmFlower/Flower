@@ -1,2 +1,92 @@
 en:
-  flower: "Flower"
+  layouts:
+
+    header:
+      logo: "The Flower"
+      topic: "Chủ đề"
+      type: "Loại hoa"
+      fashion: "Kiểu dáng"
+      about: "Giới thiệu"
+      contact: "Liên hệ"
+      search: "Search..."
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      log-out: "Đăng xuất"
+      listpost: "Bài viết"
+
+    footer:
+      type: "Loại hoa"
+      fashion: "Kiểu dáng"
+      about: "Giới thiệu"
+      topic: "Chủ đề"
+      name_shop: "Shop hoa Flower"
+      address: "Tòa nhà Handico, đường Phạm Hùng, Hà Nội"
+      h-contact: "Liên hệ với chúng tôi"
+      bazon: "&copy; 2018 là phải có hoa"
+
+    slide:
+      purchase: "Purchase Now"
+
+  pages:
+    index:
+      tile: "Sản phẩm nổi bật"
+
+    fashion:
+      kind: "Kiểu dáng"
+
+    type: "Loại hoa"
+
+    topic: "Chủ đề"
+
+    home: Trang chủ | The Flower"
+
+    details:
+      title: "Chi tiết sản phẩm"
+      self: "Chi tiết sản phẩm"
+      decor: "Miêu tả"
+      feedback: "Đánh gía"
+      call: "The Flower"
+      add: "Thêm vào giỏ hàng"
+
+      content-call: "Niềm vui và hạnh phúc"
+
+    contacts:
+      info-contact: "Thông tin liên hệ"
+      contact: "Liên hệ"
+
+    cart:
+      role: "Giỏ  hàng của bạn"
+      info: "Thông tin cá nhân"
+      list: "Danh sách sản phẩm"
+      img: "Hình ảnh"
+      name: "Tên sản phẩm"
+      many: "Số lượng"
+      price: "Đơn gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+      pay: "Thanh toán"
+
+  posts:
+    about:
+      we: "Về chúng tôi"
+    index:
+      list: "Danh sách bài viết"
+      more: "Xem thêm"
+    post:
+      title: "Hoa quần què"
+
+  products:
+    sale: "Sale"
+
+  contacts: "Liên hệ"
+
+  show:
+    unpay: "Chưa nhận hàng"
+    inpay: "Đã nhận hàng"
+    email: "Email"
+    address: "Address"
+    number-phone: "Số điện thoại"
+
+
+
