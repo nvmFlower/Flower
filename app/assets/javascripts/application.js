@@ -13,3 +13,14 @@
 //= require jquery3
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.min
+//= require bootstrap.bundle.min
+//= require jquery.easing.min
+//= require Chart.min
+//= require jquery.dataTables
+//= require dataTables.bootstrap4
+//= require sb-admin.min
+//= require sb-admin-datatables.min
+//= require sb-admin-charts.min
+//= require popper
+//= require bootstrap-sprockets

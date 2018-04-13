@@ -1,2 +1,48 @@
 en:
   flower: "Flower"
+  seach: "Search"
+  copyright: "Copyright © Your Website 2018"
+  login: "Logout"
+  layout:
+    admin:
+      title: "Admin page"
+  admin:
+    content: "Admin"
+    home:
+      _header:
+      _headermenu:
+        placeholder: "Search for..."
+        messages: "Messages"
+        new: "New"
+        new_messages: "New Messages:"
+        alerts: "Alerts"
+      _menu:
+        home: "Home"
+        flower_type: "Flower type"
+        rose: "Rose"
+        lily: "Lily"
+    product:
+      index:
+        content: "List of products"
+        table: "Table"
+        name_table: "Name table"
+        updated_time: "Updated yesterday at 11:59 PM"
+        name: "Name"
+        position: "Position"
+        office: "Office"
+        age: "Age"
+        start_date: "Start date"
+        salary: "Salary"
+  login:
+    sessionsadmin:
+      index:
+        login: "Login"
+        register_account: "Register an Account"
+        forgot_password: "Forgot Password?"
+        email: "Email address"
+        password: "Password"
+        remember_password: "Remember Password"
+    users:
+      new:
+        sign_up: "Sign up"
+        create_account: "Create my account"

@@ -13,5 +13,6 @@
 
  *= require_tree .
  *= require_self
-  *= require sb-admin.scss
+ *= require sb-admin.scss
+ *= require_directory "../../../vendor/assets/stylesheets"
  */

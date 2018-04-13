@@ -1,0 +1,46 @@
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item dropdown">
+    <%= link_to "#", class: "nav-link dropdown-toggle mr-lg-2", id: "messagesDropdown",
+      data: {toggle: "dropdown"}, aria: {haspopup: true, expanded: false} do%>
+      <i class="fa fa-fw fa-envelope"></i>
+      <span class="d-lg-none"><%= t ".messages" %>
+        <span class="badge badge-pill badge-primary"><%= t ".new" %></span>
+      </span>
+      <span class="indicator text-primary d-none d-lg-block">
+        <i class="fa fa-fw fa-circle"></i>
+      </span>
+    <% end %>
+    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+      <h6 class="dropdown-header"><%= t ".new_messages" %></h6>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <%= link_to "#", class: "nav-link dropdown-toggle mr-lg-2", id: "alertsDropdown",
+      data: {toggle: "dropdown"}, aria: {haspopup: true, expanded: false} do %>
+      <i class="fa fa-fw fa-bell"></i>
+      <span class="d-lg-none"><%= t ".alerts" %>
+        <span class="badge badge-pill badge-warning"><%= t ".new" %></span>
+      </span>
+      <span class="indicator text-warning d-none d-lg-block">
+        <i class="fa fa-fw fa-circle"></i>
+      </span>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= form_for :home, url: "" do |f| %>
+      <div class="input-group">
+        <%= f.text_field :search, class: "form-control", placeholder: t(".placeholder") %>
+        <span class="input-group-append">
+          <%= button_tag class:"btn btn-primary" do %>
+            <i class="fa fa-search"></i>
+          <% end %>
+        </span>
+      </div>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "#", {class: "nav-link"} do %>
+      <i class="fa fa-fw fa-sign-out"></i><%= t "logout" %>
+    <% end %>
+  </li>
+</ul>

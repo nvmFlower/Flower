@@ -1,0 +1,24 @@
+
+<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <%= link_to "index.html", class: "nav-link" do %>
+      <i class="fa fa-fw fa-dashboard"></i>
+      <span class="nav-link-text"><%= t ".home" %></span>
+    <% end %>
+  </li>
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+    <%= link_to "#collapseComponents", class: "nav-link nav-link-collapse collapsed",
+      data: {toggle:"collapse", parent: "#exampleAccordion"} do %>
+      <i class="fa fa-fw fa-wrench"></i>
+      <span class="nav-link-text"><%= t ".flower_type" %></span>
+    <% end %>
+    <ul class="sidenav-second-level collapse" id="collapseComponents">
+      <li>
+        <%= link_to t(".rose"), "#" %>
+      </li>
+      <li>
+        <%= link_to t(".lily"), "#" %>
+      </li>
+    </ul>
+  </li>
+</ul>
