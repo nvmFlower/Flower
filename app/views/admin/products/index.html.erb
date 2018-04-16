@@ -1,0 +1,32 @@
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <%= link_to t(".content"), "#"%>
+      </li>
+      <li class="breadcrumb-item active"><%= t ".table" %></li>
+    </ol>
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i><%= t ".name_table" %></div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" cellspacing="0">
+            <thead>
+              <tr>
+                <th><%= t ".name" %></th>
+                <th><%= t ".position" %></th>
+                <th><%= t ".office" %></th>
+                <th><%= t ".age" %></th>
+                <th><%= t ".start_date" %></th>
+                <th><%= t ".salary" %></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer small text-muted"><%= t ".updated_time" %></div>
+    </div>
+  </div>
+</div>
