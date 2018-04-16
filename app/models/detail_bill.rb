@@ -4,4 +4,5 @@ class DetailBill < ApplicationRecord
 
   validates :amout, presence: true
   validates :price, presence: true
+
 end

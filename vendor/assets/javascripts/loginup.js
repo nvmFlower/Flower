@@ -1,21 +1,22 @@
-var email = document.querySelector('#email'), password = document.querySelector('#password'), mySVG = document.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');
-var caretPos, curEmailIndex, screenCenter, svgCoords, eyeMaxHorizD = 20, eyeMaxVertD = 10, noseMaxHorizD = 23, noseMaxVertD = 10, dFromC, eyeDistH, eyeLDistV, eyeRDistV, eyeDistR, mouthStatus = "small";
 
-function getCoord(e) {
-  var   carPos = email.selectionEnd,
+  var email = document.querySelector('#email'), password = document.querySelector('#password'), mySVG = document.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');
+  var caretPos, curEmailIndex, screenCenter, svgCoords, eyeMaxHorizD = 20, eyeMaxVertD = 10, noseMaxHorizD = 23, noseMaxVertD = 10, dFromC, eyeDistH, eyeLDistV, eyeRDistV, eyeDistR, mouthStatus = "small";
+
+  function getCoord(e) {
+    var   carPos = email.selectionEnd,
     div = document.createElement('div'),
     span = document.createElement('span'),
     copyStyle = getComputedStyle(email),
     emailCoords = {}, caretCoords = {}, centerCoords = {}
-  ;
-  [].forEach.call(copyStyle, function(prop){
-    div.style[prop] = copyStyle[prop];
-  });
-  div.style.position = 'absolute';
-  document.body.appendChild(div);
-  div.textContent = email.value.substr(0, carPos);
-  span.textContent = email.value.substr(carPos) || '.';
-  div.appendChild(span);
+    ;
+    [].forEach.call(copyStyle, function(prop){
+      div.style[prop] = copyStyle[prop];
+    });
+    div.style.position = 'absolute';
+    document.body.appendChild(div);
+    div.textContent = email.value.substr(0, carPos);
+    span.textContent = email.value.substr(carPos) || '.';
+    div.appendChild(span);
 
   emailCoords = getPosition(email);             //console.log("emailCoords.x: " + emailCoords.x + ", emailCoords.y: " + emailCoords.y);
   caretCoords = getPosition(span);              //console.log("caretCoords.x " + caretCoords.x + ", caretCoords.y: " + caretCoords.y);
@@ -201,3 +202,5 @@ password.addEventListener('focus', onPasswordFocus);
 password.addEventListener('blur', onPasswordBlur);
 TweenMax.set(armL, {x: -93, y: 220, rotation: 105, transformOrigin: "top left"});
 TweenMax.set(armR, {x: -93, y: 220, rotation: -105, transformOrigin: "top right"});
+
+

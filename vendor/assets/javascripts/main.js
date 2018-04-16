@@ -165,7 +165,6 @@ $(document).on('turbolinks:load', function(){
 						tabHeight = $('.fh5co-tab-nav').outerHeight(),
 						formActiveHeight = $('.tab-content.active').outerHeight(),
 						totalHeight = parseInt(tabHeight + formActiveHeight + 90);
-
 						tabContentWrap.css('height', totalHeight );
 				});
 

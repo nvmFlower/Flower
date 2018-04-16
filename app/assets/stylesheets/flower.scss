@@ -17,6 +17,10 @@
   }
 }
 
+.text{
+  text-decoration: line-through;
+}
+
 .firts-side{
   background: url('img_bg_1.jpg');
 }
@@ -62,7 +66,7 @@
 }
 
 #fh5co-product{
-  padding-top: 30px !important;
+  padding-top: 100px !important;
 }
 
 .owl-fix{
@@ -125,6 +129,11 @@
       }
     }
   }
+}
+
+.sale{
+  padding-left: 7px;
+  color: red;
 }
 
 .image-detail{

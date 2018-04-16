@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
+  before_action :read_menu
+
+  def read_menu
+    @occasions = Occasion.all
+    @type_flower = TypeFlower.all
+     @design = Design.all
+    end
 end

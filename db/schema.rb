@@ -93,11 +93,11 @@ ActiveRecord::Schema.define(version: 20180410090057) do
 
   create_table "product_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "product_id"
-    t.bigint "type_flowers_id"
+    t.bigint "type_flower_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_product_types_on_product_id"
-    t.index ["type_flowers_id"], name: "index_product_types_on_type_flowers_id"
+    t.index ["type_flower_id"], name: "index_product_types_on_type_flower_id"
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.integer "price"
     t.string "img"
     t.boolean "many_or_not", default: true
-    t.integer "sale"
+    t.integer "sale", default: 0
     t.text "details"
     t.integer "view"
     t.integer "rating"
@@ -163,7 +163,7 @@ ActiveRecord::Schema.define(version: 20180410090057) do
   add_foreign_key "product_occasions", "occasions"
   add_foreign_key "product_occasions", "products"
   add_foreign_key "product_types", "products"
-  add_foreign_key "product_types", "type_flowers", column: "type_flowers_id"
+  add_foreign_key "product_types", "type_flowers"
   add_foreign_key "products", "designs"
   add_foreign_key "ratings", "products"
   add_foreign_key "ratings", "users"
