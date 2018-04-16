@@ -161,3 +161,19 @@ en:
 
 
 
+  users:
+    show:
+      unpay: "Chưa nhận hàng"
+      inpay: "Đã nhận hàng"
+      email: "Email"
+      address: "Address"
+      number-phone: "Số điện thoại"
+      img: "Ảnh"
+      name: "Tên"
+      many: "Số lượng"
+      price: "Gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+
+  not_found: "Not Found!"
