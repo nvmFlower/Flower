@@ -17,6 +17,8 @@ en:
   name_shop: "Shop Flower"
   address: "11F, Handico Tower, Pham Hung, Nam Tu Liem, Ha Noi"
   bazon: "&copy; 2018 Flower"
+  not_found: "Not Found!"
+
   layout:
     admin:
       title: "Admin page"
@@ -67,6 +69,25 @@ en:
         age: "Age"
         start_date: "Start date"
         salary: "Salary"
+
+    categories:
+      success: "Successfully!!!"
+      delete_succes: "Delete Successfully!"
+      delete_found: "Delete Found!"
+
+  login:
+    sessionsadmin:
+      index:
+        login: "Login"
+        register_account: "Register an Account"
+        forgot_password: "Forgot Password?"
+        email: "Email address"
+        password: "Password"
+        remember_password: "Remember Password"
+    users:
+      new:
+        sign_up: "Sign up"
+        create_account: "Create my account"
 
   layouts:
     header:

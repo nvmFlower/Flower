@@ -25,9 +25,18 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show]
     resources :contacts, only: [:new, :create]
     resources :products, only: [:show]
-    namespace :admin do
-      resources :home, only: [:index]
-      resources :products, only: [:index]
-    end
+
+  namespace :admin do
+    resources :home, only: [:index]
+    resources :products, only: [:index]
+    resources :colors
+    resources :designs
+    resources :occasions
+    resources :type_flowers
   end
+
+  namespace :login do
+    resources :sessionsadmin
+  end
+end
 end
