@@ -11,7 +11,15 @@
  * It is generally better to create a new file per style scope.
  *
 
- *= require_tree .
  *= require_self
-  *= require sb-admin.scss
+ *= require_tree .
+ *= require animate.css
+ *= require bootstrap.scss
+ *= require flexslider.css
+ *= require icomoon.css
+ *= require owl.carousel.min.css
+ *= require owl.theme.default.min.css
+ *= require style
+ *= require flower
  */
+
