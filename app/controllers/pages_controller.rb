@@ -1,24 +1,5 @@
 class PagesController < ApplicationController
   def index
-  end
-
-  def topic
-  end
-
-  def types
-  end
-
-  def contacts
-    @custom = ""
-  end
-
-  def cart
-    @user = ""
-  end
-
-  def details
-  end
-
-  def fashion
+    @products = Product.limit(6).order view: :desc
   end
 end

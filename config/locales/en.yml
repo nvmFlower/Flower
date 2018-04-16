@@ -67,6 +67,7 @@ en:
         age: "Age"
         start_date: "Start date"
         salary: "Salary"
+
   layouts:
     header:
       logo: "The Flower"
@@ -74,37 +75,44 @@ en:
       profile: "Profile"
       settings: "Settings"
       log-out: "Logout"
+      login: "Login"
       listpost: "List post"
+      about: "About"
+      contact: "Contact"
     slide:
       purchase: "Purchase Now"
 
   pages:
     index:
+      home: "Home"
       tile: "Hot products"
 
-    fashion:
+  designs:
+    show:
       kind: "Style"
 
-    type: "Type of flowers"
+  types:
+    show:
+      type: "Type of flowers"
 
-    topic: "Topic"
+  occasions:
+    show:
+     topic: "Topic"
 
-    home: The Flower"
-
-    details:
+  products:
+    show:
       title: "Product details"
-      self: "Chi tiết sản phẩm"
+      self: "Details"
       decor: "Describe"
-      feedback: "Ratting"
+      feedback: "Comment"
       call: "The Flower"
       add: "Add to cart"
       content-call: "Funness and happiness"
+    _product:
+      sale: "Sale"
 
-    contacts:
-      info-contact: "Contact Info"
-      contact: "Contact"
-
-    cart:
+  carts:
+    index:
       role: "Your cart"
       info: "Personal info"
       list: "List of products"
@@ -116,6 +124,7 @@ en:
       time: "Set time"
       status: "Status"
       pay: "Pay"
+      info: "Your information"
 
   posts:
     about:
@@ -123,36 +132,15 @@ en:
     index:
       list: "List of articles"
       more: "More info"
-
-  contacts: "Contact"
-
-  users:
     show:
-      unpay: "Chưa nhận hàng"
-      inpay: "Đã nhận hàng"
-      email: "Email"
-      address: "Address"
-      number-phone: "Số điện thoại"
-      img: "Ảnh"
-      name: "Tên"
-      many: "Số lượng"
-      price: "Gía"
-      like: "Đánh gía"
-      time: "Thời gian đặt"
-      status: "Trạng thái"
-  cart:
-    add: "Thêm vào giỏ hàng"
-    img: "Hình ảnh"
-    name: "Tên sản phẩm"
-    many: "Số lượng"
-    price: "Đơn gía"
-    like: "Đánh gía"
-    time: "Thời gian đặt"
-    status: "Trạng thái"
-    unpay: "Chưa nhận hàng"
-    pay: "Đã nhận hàng"
+      title: "Post"
+    content_post:
+      author: "Author"
 
-  show:
-    email: "Email"
-    address: "Address"
-    number-phone: "Số điện thoại"
+  contacts:
+    new:
+      contacts: "Contact"
+      info-contact: "Contact Infomation"
+
+
+

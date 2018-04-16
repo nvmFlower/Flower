@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "bcrypt", "~> 3.1", ">= 3.1.11"
-gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "coffee-rails", "~> 4.2"
 gem "config"
@@ -23,10 +21,11 @@ gem "sprockets-rails"
 gem "textacular", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
-gem "config"
 gem "meta-tags-helpers", "~> 0.2.0"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "bcrypt", "~> 3.1", ">= 3.1.11"
+gem "faker", :git => "https://github.com/stympy/faker.git", :branch => "master"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

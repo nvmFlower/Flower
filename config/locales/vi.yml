@@ -73,50 +73,54 @@ vi:
       profile: "Hồ sơ"
       settings: "Cài đặt"
       log-out: "Đăng xuất"
+      login: "Đăng nhập"
       listpost: "Bài viết"
-
+      about: "Về chúng tôi"
+      contact: "Liên hệ"
     slide:
       purchase: "Mua hàng"
 
   pages:
     index:
-      tile: "Sản phẩm nổi bật"
+      home: "Trang chủ"
+      tile: "Sản phẩm tiêu biểu"
 
-    fashion:
+  designs:
+    show:
       kind: "Kiểu dáng"
 
-    type: "Loại hoa"
+  types:
+    show:
+      type: "Loại hoa"
 
-    topic: "Chủ đề"
+  occasions:
+    show:
+     topic: "Chủ đề"
 
-    home: Trang chủ"
-
-    details:
+  products:
+    show:
       title: "Chi tiết sản phẩm"
       self: "Chi tiết sản phẩm"
       decor: "Miêu tả"
       feedback: "Đánh gía"
-      call: "Hoa"
-      add: "Thêm vào giỏ hàng"
+      call: "The Flower"
+      add: "Thêm vào rỏ hàng"
+      content-call: "Vui vẻ và hạnh phúc"
+    _product:
+      sale: "Sale"
 
-      content-call: "Niềm vui và hạnh phúc"
-
-    contacts:
-      info-contact: "Thông tin liên hệ"
-      contact: "Liên hệ"
-
-    cart:
-      role: "Giỏ  hàng của bạn"
-      info: "Thông tin cá nhân"
+  carts:
+    index:
+      role: "Rỏ hàng của bạn"
+      info: "Thông tin của khách hàng "
       list: "Danh sách sản phẩm"
-      img: "Hình ảnh"
-      name: "Tên sản phẩm"
+      img: "Ảnh"
+      name: "Tên"
       many: "Số lượng"
-      price: "Đơn gía"
+      price: "Gía"
       like: "Đánh gía"
       time: "Thời gian đặt"
-      status: "Trạng thái"
-      pay: "Thanh toán"
+      pay: "Thanh Toán"
 
   posts:
     about:
@@ -124,10 +128,13 @@ vi:
     index:
       list: "Danh sách bài viết"
       more: "Xem thêm"
-    post:
-      title: "Hoa"
+    show:
+      title: "Bài Viết"
+    content_post:
+      author: "Tác gỉa"
 
-  products:
-    sale: "Sale"
+  contacts:
+    new:
+      contacts: "Liên hệ"
+      info-contact: "Thông tin liên hệ"
 
-  contacts: "Liên hệ"

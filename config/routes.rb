@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
-
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    root "pages#index"
+    get "/contacts", to: "contacts#new"
+    get "/products/:id", to: "products#show"
+    get "/cart", to: "carts#index"
+    post "/cart", to: "carts#create"
+    get "/profile", to: "users#show"
     get "/admin", to: "admin/home#index"
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
@@ -8,21 +14,19 @@ Rails.application.routes.draw do
     post "/login", to: "session#create"
     get "/logout", to: "session#new"
     delete "/logout", to: "session#destroy"
-
-    root "pages#index"
-    get "/occasions", to: "pages#topic"
-    get "/contacts", to: "pages#contacts"
-    get "/about", to: "posts#about"
-    get "/details", to: "pages#details"
-    get "/types", to: "pages#types"
-    get "/cart", to: "pages#cart"
-    get "/fashion", to: "pages#fashion"
     get "/list_post", to: "posts#index"
-    get "/list_post/post", to: "posts#post"
+    get "/about", to: "posts#about"
     get "/profile", to: "users#show"
+    post "/commet", to: "comments#create"
+
     resources :users
     resources :sessions
-
+    resources :occasions, only: [:show]
+    resources :types, only: [:show]
+    resources :designs, only: [:show]
+    resources :posts, only: [:index, :show]
+    resources :contacts, only: [:new, :create]
+    resources :products, only: [:show]
     namespace :admin do
       resources :home, only: [:index]
       resources :products, only: [:index]
