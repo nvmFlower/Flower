@@ -1,0 +1,24 @@
+ <div class="row">
+  <div class="col-md-4 col-sm-6 text-center animate-box">
+    <div class="product">
+      <%= image_tag "l1.jpg", alt: "flower", class: "img-product" %>
+      <div class="product-grid">
+        <span class="sale"><%= t "products.sale" %></span>
+        <div class="inner">
+          <p>
+            <%= link_to details_path, class: "icon" do %>
+            <i class="icon-shopping-cart"></i>
+            <% end %>
+            <%= link_to details_path, class: "icon" do %>
+            <i class="icon-eye"></i>
+            <% end %>
+          </p>
+        </div>
+      </div>
+      <div class="desc">
+        <h3><%= link_to "Hauteville Concrete Rocking Chair", details_path %></h3>
+        <span class="price">$350</span>
+      </div>
+    </div>
+  </div>
+</div>

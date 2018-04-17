@@ -1,0 +1,153 @@
+@import 'varible.scss';
+.logo{
+  font-size: 22px;
+  color: $color_apple_approx !important;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.user{
+  float: left;
+}
+
+.item-nav{
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.firts-side{
+  background: url('img_bg_1.jpg');
+}
+
+.second-side{
+  background: url('img_bg_2.jpg');
+}
+
+.third-side{
+  background: url('img_bg_3.jpg');
+}
+
+.four-side{
+  background: url('img_bg_4.jpg');
+}
+
+.slides li{
+  min-height: 500px !important;
+  .slider-text{
+    min-height: 500px !important;
+  }
+}
+
+.product{
+  position: relative;
+}
+
+.img-product{
+  position: absolute !important;
+  left: 0;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+
+#fh5co-hero{
+  min-height: 500px !important;
+}
+
+#fh5co-product{
+  padding-top: 30px !important;
+}
+
+.owl-fix{
+  width: 500px !important;
+  height: 500px !important;
+  margin: 0 auto;
+}
+
+.title-cart{
+  color: $black_50;
+  font-size: 18px;
+}
+
+.pad{
+  padding: 50px 30px !important;
+}
+
+.border-bot{
+  border-bottom: 1px solid $black_50;
+  padding-bottom: 7px;
+}
+
+.delete-pr{
+  position: absolute !important;
+  bottom: 0;
+  right: 10px;
+  a{
+    float: right;
+  }
+}
+
+.item-info{
+  margin-bottom: 15px;
+}
+
+.img-info{
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#menu{
+  box-shadow: none;
+  li{
+    width: 100%;
+    border-bottom: 1px solid $color_gallery_approx;
+    a{
+      padding: 10px;
+      &:hover{
+        background: lighten($brand-primary, 5%)!important;
+        border-color: lighten($brand-primary, 5%)!important;
+        color: white;
+      }
+    }
+  }
+}
+
+.image-detail{
+  width: 200px;
+  height: 500px;
+}
+
+.icon-star2{
+  color: $selective_yellow;
+}
+
+.content{
+  padding: 0 10px 100px 10px;
+
+}
+
+.img-pr{
+  max-width: 70px;
+  max-height: 100px;
+}
+
+th{
+  font-weight: 400 !important;
+}
+
+td{
+  vertical-align: middle !important;
+}
+
+.blue{
+  background: $color_dodger_blue_approx;
+  color: $brand-white;
+}
+
+.red{
+  background: $color_red_orange_approx;
+  color: $brand-white;
+}
