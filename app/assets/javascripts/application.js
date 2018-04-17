@@ -10,17 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
-//= require jquery_ujs
 //= require_tree .
-//= require jquery.min
-//= require bootstrap.bundle.min
-//= require jquery.easing.min
-//= require Chart.min
-//= require jquery.dataTables
-//= require dataTables.bootstrap4
-//= require sb-admin.min
-//= require sb-admin-datatables.min
-//= require sb-admin-charts.min
-//= require popper
-//= require bootstrap-sprockets
+//= require rails-ujs
+//= require turbolinks
+//= require jquery.min.js
+//= require jquery.easing.1.3.js
+//= require bootstrap.min.js
+//= require jquery.waypoints.min.js
+//= require owl.carousel.min.js
+//= require jquery.countTo.js
+//= require jquery.flexslider-min.js
+//= require main.js
