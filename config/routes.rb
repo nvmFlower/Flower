@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :designs
     resources :occasions
     resources :type_flowers
+    get "/index", to: "home#index"
   end
 
   namespace :login do
