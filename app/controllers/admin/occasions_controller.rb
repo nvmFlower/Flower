@@ -6,7 +6,9 @@ class Admin::OccasionsController < Admin::ApplicationController
       .per Settings.page
   end
 
-  def new; end
+  def new
+    @occasion = Occasion.new
+  end
 
   def create
     @occasion = Occasion.new occasion_params

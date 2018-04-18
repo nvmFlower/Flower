@@ -5,7 +5,9 @@ class Admin::DesignsController < Admin::ApplicationController
     @designs = Design.list_all_name.sort_alpha.page(params[:page]).per Settings.page
   end
 
-  def new; end
+  def new
+    @design = Design.new
+  end
 
   def create
     @design = Design.new design_params

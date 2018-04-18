@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   has_many :product_occasions, dependent: :destroy
   has_many :product_types, dependent: :destroy
   has_many :ratings, dependent: :destroy
+
   has_many :detail_bills, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :color_products, through: :product_colors, source: :color

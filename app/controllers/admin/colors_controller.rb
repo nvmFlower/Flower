@@ -15,6 +15,7 @@ class Admin::ColorsController < Admin::ApplicationController
       flash[:success] = t "admin.categories.success"
       redirect_to admin_colors_url
     else
+      flash.now[:danger]= "Loi"
       render :new
     end
   end
@@ -45,10 +46,9 @@ class Admin::ColorsController < Admin::ApplicationController
 
   def read_color
     @color = Color.find_by id: params[:id]
-    if @color.nil?
+    return @color unless @color.nil?
       flash[:danger] = t "not_found"
       redirect_to admin_colors_path
-    end
   end
 
   def color_params

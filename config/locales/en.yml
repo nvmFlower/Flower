@@ -18,6 +18,7 @@ en:
   address: "11F, Handico Tower, Pham Hung, Nam Tu Liem, Ha Noi"
   bazon: "&copy; 2018 Flower"
   not_found: "Not Found!"
+  confrim: "Are you sure???"
 
   layout:
     admin:
@@ -74,6 +75,15 @@ en:
       success: "Successfully!!!"
       delete_succes: "Delete Successfully!"
       delete_found: "Delete Found!"
+      index: "Index"
+      read_more: "Read more..."
+      color: "Color"
+      type: "Type"
+      design: "Design"
+      occasion: "Occasion"
+      created_at: "Create_at"
+      updated_at: "Update_at"
+      add: "Add "
 
   login:
     sessionsadmin:
@@ -131,6 +141,12 @@ en:
       content-call: "Funness and happiness"
     _product:
       sale: "Sale"
+      add: "Thêm vào giỏ hàng"
+      content-call: "Niềm vui và hạnh phúc"
+
+    contacts:
+      info-contact: "Thông tin liên hệ"
+      contact: "Liên hệ"
 
   carts:
     index:
@@ -176,4 +192,6 @@ en:
       time: "Thời gian đặt"
       status: "Trạng thái"
 
-  not_found: "Not Found!"
+  button:
+    create: "Create"
+    update: "Update"

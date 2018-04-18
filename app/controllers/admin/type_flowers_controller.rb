@@ -6,7 +6,9 @@ class Admin::TypeFlowersController < Admin::ApplicationController
       .per Settings.page
   end
 
-  def new; end
+  def new
+    @type_flower = TypeFlower.new
+  end
 
   def create
     @type_flower = TypeFlower.new type_flower_params

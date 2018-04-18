@@ -1,7 +1,7 @@
     <div class="card mb-3">
       <div class="card-header">
-        <i class="fa fa-table"></i>&nbsp;<%= t "admin.categories.color"%>
-        <%= link_to t("admin.categories.add"), new_admin_color_path,
+        <i class="fa fa-table"></i>&nbsp;<%= t "admin.categories.design"%>
+        <%= link_to t("admin.categories.add"), new_admin_design_path,
           style: "float: right;" %>
       </div>
       <div class="card-body">
@@ -15,17 +15,17 @@
           <th><%= t "admin.categories.updated_at" %></th>
           <th><%= t "admin.categories.change" %></th>
         </tr>
-         <% @colors.each_with_index do |color, index| %>
+         <% @designs.each_with_index do |design, index| %>
           <tr>
             <td><%= create_index params[:page], index, Settings.page %></td>
-            <td><%= color.name %></td>
-            <td><%= color.created_at %></td>
-            <td><%= color.updated_at %></td>
+            <td><%= design.name %></td>
+            <td><%= design.created_at %></td>
+            <td><%= design.updated_at %></td>
             <td>
-              <%= link_to edit_admin_color_path(color) do %>
+              <%= link_to edit_admin_design_path(design) do %>
               <i class="material-icons" style="font-size:24px">sync</i>
             <% end %>
-            <%= link_to [:admin, color], method: :delete, data: { confirm: t("confrim") } do %>
+            <%= link_to [:admin, design], method: :delete, data: { confirm: t("confrim") } do %>
               <i class="fa fa-remove" style="font-size:24px;color:red"></i>
             <% end %>
             </td>
@@ -33,7 +33,7 @@
          <% end %>
       </thead>
     </table>
-     <%= paginate @colors %>
+     <%= paginate @designs %>
   </div>
 </div>
 
