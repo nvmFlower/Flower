@@ -3,6 +3,8 @@ en:
   seach: "Search"
   copyright: "Copyright © Your Website 2018"
   login: "Logout"
+  not_found: "Not Found!"
+
   layout:
     admin:
       title: "Admin page"
@@ -33,6 +35,12 @@ en:
         age: "Age"
         start_date: "Start date"
         salary: "Salary"
+
+    categories:
+      success: "Successfully!!!"
+      delete_succes: "Delete Successfully!"
+      delete_found: "Delete Found!"
+
   login:
     sessionsadmin:
       index:

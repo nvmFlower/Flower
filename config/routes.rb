@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :home, only: [:index]
     resources :products, only: [:index]
+    resources :colors
+    resources :designs
+    resources :occasions
+    resources :type_flowers
   end
+
   namespace :login do
     resources :sessionsadmin
   end
