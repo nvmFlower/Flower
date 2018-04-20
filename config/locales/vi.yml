@@ -1,0 +1,133 @@
+vi:
+  flower: "Hoa"
+  seach: "Tìm kiếm"
+  copyright: "Copyright © Your Website 2018"
+  login: "Đăng nhập"
+  danger: "Email/password không hợp lệ"
+  no_user: "Không tìm thấy người dùng"
+  welcome: "Chào mừng"
+  form_contains: "Nội dung biểu mẫu"
+  logout: "Đăng xuất"
+  content: "Quản trị"
+  topic: "Chủ đề"
+  type: "Loại hoa"
+  fashion: "Kiểu dáng"
+  about: "Giới thiệu"
+  contact: "Liên hệ"
+  h-contact: "Liên hệ với chúng tôi"
+  name_shop: "Shop hoa Flower"
+  address: "Tầng 11, Tòa nhà Handico, đường Phạm Hùng, Hà Nội"
+  bazon: "&copy; 2018 là phải có hoa"
+  layout:
+    admin:
+      title: "Trang quản trị"
+  session:
+    new:
+      register_account: "Đăng ký tài khoản"
+      forgot_password: "Quên mật khẩu?"
+      email: "Địa chỉ email"
+      password: "mật khẩu"
+      remember_password: "Nhớ mật khẩu"
+  users:
+    new:
+      sign_up: "Đăng ký"
+      create_account: "Tạo tài khoản"
+      name: "Tên"
+      address: "Địa chỉ"
+      phone: "Sổ điện thoại"
+      email: "Email"
+      password: "Mật khẩu"
+      confirm_password: "Xác nhận mật khẩu"
+    show:
+      personal_information: "Thông tin cá nhân"
+      history: "Lich sử "
+  admin:
+    home:
+      headermenu:
+        placeholder: "Tìm kiếm..."
+        messages: "Tin nhắn"
+        new: "Mới"
+        new_messages: "Tin nhắn mới:"
+        alerts: "Cảnh báo"
+      menu:
+        home: "Trang chủ"
+        flower_type: "Loại hoa"
+        rose: "Hoa hồng"
+        lily: "Hoa ly"
+    product:
+      index:
+        content: "Danh sách sản phẩm"
+        table: "Bảng"
+        name_table: "Tên bảng"
+        updated_time: "Cập nhập lúc 11:59 PM"
+        name: "Tên"
+        position: "Chức vụ"
+        office: "Văn phòng"
+        age: "Tuổi"
+        start_date: "Ngày bắt đầu"
+        salary: "Lương"
+  layouts:
+    header:
+      logo: "Hoa"
+      search: "Tìm kiếm..."
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      log-out: "Đăng xuất"
+      listpost: "Bài viết"
+
+    slide:
+      purchase: "Mua hàng"
+
+  pages:
+    index:
+      tile: "Sản phẩm nổi bật"
+
+    fashion:
+      kind: "Kiểu dáng"
+
+    type: "Loại hoa"
+
+    topic: "Chủ đề"
+
+    home: Trang chủ"
+
+    details:
+      title: "Chi tiết sản phẩm"
+      self: "Chi tiết sản phẩm"
+      decor: "Miêu tả"
+      feedback: "Đánh gía"
+      call: "Hoa"
+      add: "Thêm vào giỏ hàng"
+
+      content-call: "Niềm vui và hạnh phúc"
+
+    contacts:
+      info-contact: "Thông tin liên hệ"
+      contact: "Liên hệ"
+
+    cart:
+      role: "Giỏ  hàng của bạn"
+      info: "Thông tin cá nhân"
+      list: "Danh sách sản phẩm"
+      img: "Hình ảnh"
+      name: "Tên sản phẩm"
+      many: "Số lượng"
+      price: "Đơn gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+      pay: "Thanh toán"
+
+  posts:
+    about:
+      we: "Về chúng tôi"
+    index:
+      list: "Danh sách bài viết"
+      more: "Xem thêm"
+    post:
+      title: "Hoa"
+
+  products:
+    sale: "Sale"
+
+  contacts: "Liên hệ"

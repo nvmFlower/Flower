@@ -8,6 +8,15 @@ en:
   welcome: "Welcome"
   form_contains: "The form contains"
   login: "Login"
+  topic: "Topic"
+  type: "Type of flowers"
+  fashion: "Style"
+  about: "About"
+  contact: "Contact"
+  h-contact: "Contact us"
+  name_shop: "Shop Flower"
+  address: "11F, Handico Tower, Pham Hung, Nam Tu Liem, Ha Noi"
+  bazon: "&copy; 2018 Flower"
   layout:
     admin:
       title: "Admin page"
@@ -61,80 +70,64 @@ en:
   layouts:
     header:
       logo: "The Flower"
-      topic: "Chủ đề"
-      type: "Loại hoa"
-      fashion: "Kiểu dáng"
-      about: "Giới thiệu"
-      contact: "Liên hệ"
       search: "Search..."
-      profile: "Hồ sơ"
-      settings: "Cài đặt"
-      log-out: "Đăng xuất"
-      listpost: "Bài viết"
-
-    footer:
-      type: "Loại hoa"
-      fashion: "Kiểu dáng"
-      about: "Giới thiệu"
-      topic: "Chủ đề"
-      name_shop: "Shop hoa Flower"
-      address: "Tòa nhà Handico, đường Phạm Hùng, Hà Nội"
-      h-contact: "Liên hệ với chúng tôi"
-      bazon: "&copy; 2018 là phải có hoa"
-
+      profile: "Profile"
+      settings: "Settings"
+      log-out: "Logout"
+      listpost: "List post"
     slide:
       purchase: "Purchase Now"
 
   pages:
     index:
-      tile: "Sản phẩm nổi bật"
+      tile: "Hot products"
 
     fashion:
-      kind: "Kiểu dáng"
+      kind: "Style"
 
-    type: "Loại hoa"
+    type: "Type of flowers"
 
-    topic: "Chủ đề"
+    topic: "Topic"
 
-    home: Trang chủ | The Flower"
+    home: The Flower"
 
     details:
-      title: "Chi tiết sản phẩm"
+      title: "Product details"
       self: "Chi tiết sản phẩm"
-      decor: "Miêu tả"
-      feedback: "Đánh gía"
+      decor: "Describe"
+      feedback: "Ratting"
       call: "The Flower"
-      add: "Thêm vào giỏ hàng"
+      add: "Add to cart"
 
-      content-call: "Niềm vui và hạnh phúc"
+      content-call: "Funness and happiness"
 
     contacts:
-      info-contact: "Thông tin liên hệ"
-      contact: "Liên hệ"
+      info-contact: "Contact Info"
+      contact: "Contact"
 
     cart:
-      role: "Giỏ  hàng của bạn"
-      info: "Thông tin cá nhân"
-      list: "Danh sách sản phẩm"
-      img: "Hình ảnh"
-      name: "Tên sản phẩm"
-      many: "Số lượng"
-      price: "Đơn gía"
-      like: "Đánh gía"
-      time: "Thời gian đặt"
-      status: "Trạng thái"
-      pay: "Thanh toán"
+      role: "Your cart"
+      info: "Personal info"
+      list: "List of products"
+      img: "Image"
+      name: "Product name"
+      many: "Amount"
+      price: "Price"
+      like: "Ratting"
+      time: "Set time"
+      status: "Status"
+      pay: "Pay"
 
   posts:
     about:
-      we: "Về chúng tôi"
+      we: "About us"
     index:
-      list: "Danh sách bài viết"
-      more: "Xem thêm"
+      list: "List of articles"
+      more: "More info"
     post:
-      title: "Hoa quần què"
+      title: "Flower"
 
   products:
     sale: "Sale"
 
-  contacts: "Liên hệ"
+  contacts: "Contact"

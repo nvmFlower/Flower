@@ -6,11 +6,13 @@
           <div id="fh5co-logo">
             <%= link_to t(".logo"), root_path, class: "logo" %>
           </div>
+          <%= link_to "English", locale:"en" %>
+          <%= link_to "Vietnamese", locale:"vi" %>
         </div>
         <div class="col-md-6 col-xs-6 text-center menu-1">
           <ul>
             <li class="has-dropdown">
-              <%= link_to t(".topic"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
+              <%= link_to t("topic"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav row" id="ocs">
                 <li>
                   <%= link_to "Ngày 8/3", occasions_path, class: "col-md-3" %>
@@ -24,7 +26,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <%= link_to t(".type"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
+              <%= link_to t("type"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav ">
                 <li>
                   <%= link_to "Hoa hồng", types_path, class: "col-md-3" %>
@@ -32,7 +34,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <%= link_to t(".fashion"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
+              <%= link_to t("fashion"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav">
                 <li><%= link_to "Bó Hoa", fashion_path, class: "col-md-3" %></li>
                 <li><%= link_to "Lãng Hoa", fashion_path, class: "col-md-3" %></li>
@@ -40,8 +42,8 @@
               </ul>
             </li>
             <li><%= link_to t(".listpost"), list_post_path, class: "item-nav" %></li>
-            <li><%= link_to t(".about"), about_path, class: "item-nav" %></li>
-            <li><%= link_to t(".contact"), contacts_path, class: "item-nav" %></li>
+            <li><%= link_to t("about"), about_path, class: "item-nav" %></li>
+            <li><%= link_to t("contact"), contacts_path, class: "item-nav" %></li>
           </ul>
         </div>
         <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
