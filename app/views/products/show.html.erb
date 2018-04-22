@@ -31,9 +31,10 @@
           <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <h2><%= @product.name %></h2>
             <p>
-              <%= link_to cart_path(@product) do %>
-                <%= button_tag t(".add"), class: "btn btn-primary btn-outline btn-lg"%>
-              <% end %>
+              <%= form_for(@order_item, remote: true) do |f| %>
+          <%= f.hidden_field :product_id, value: @product.id %>
+          <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+        <% end %>
             </p>
           </div>
         </div>
@@ -77,8 +78,24 @@
               </div>
             </div>
             <div class="fh5co-tab-content tab-content overflow" data-tab-content="2">
-                <%= render partial: "products/comment",
-                collection: @comment, as: :c %>
+              <%= render partial: "products/comment",
+              collection: @comment, as: :c %>
+              <div class="col-md-10 col-md-offset-1">
+                <%= form_for :com,
+                url: {controller: "comments", action: "create"} do |f| %>
+                  <div class="text-center">
+                    <%= f.hidden_field :product_id, value: @product.id%>
+                    <% if logged_in? %>
+                    <%= f.hidden_field :user_id, value: current_user.id %>
+                    <% end %>
+                    <%= f.text_area :content, size: "50x5", class: "content-com" %>
+                    <%= f.submit "Comment", class: "subcomment" %>
+                    <script>
+                      <%= render "products/com.js.erb" %>
+                    </script>
+                  </div>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>

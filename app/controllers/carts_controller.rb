@@ -1,10 +1,5 @@
 class CartsController < ApplicationController
   def index
-    @user = ""
+    @order_items = current_order.order_items
   end
-
-  private
-    def cart_params
-      params.require(:cart).params
-    end
 end

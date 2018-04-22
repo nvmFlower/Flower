@@ -134,3 +134,7 @@ vi:
       contacts: "Contact"
       info-contact: "Contact Infomation"
 
+  users:
+    button:
+      create: "Tạo mới"
+      update: "Cập nhật"

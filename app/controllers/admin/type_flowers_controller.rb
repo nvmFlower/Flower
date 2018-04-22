@@ -48,7 +48,7 @@ class Admin::TypeFlowersController < Admin::ApplicationController
     @type_flower = TypeFlower.find_by id: params[:id]
     if @type_flower.nil?
       flash[:danger] = t "not_found"
-      redirect_to admin_type_flowers_path
+      redirect_to admin_type_flowers_url
     end
   end
 

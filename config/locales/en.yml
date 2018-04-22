@@ -192,6 +192,6 @@ en:
       time: "Thời gian đặt"
       status: "Trạng thái"
 
-  button:
-    create: "Create"
-    update: "Update"
+    button:
+      create: "Create"
+      update: "Update"

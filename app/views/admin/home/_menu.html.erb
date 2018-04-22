@@ -10,14 +10,17 @@
     <%= link_to "#collapseComponents", class: "nav-link nav-link-collapse collapsed",
       data: {toggle:"collapse", parent: "#exampleAccordion"} do %>
       <i class="fa fa-fw fa-wrench"></i>
-      <span class="nav-link-text"><%= t ".flower_type" %></span>
+      <span class="nav-link-text">Table</span>
     <% end %>
     <ul class="sidenav-second-level collapse" id="collapseComponents">
       <li>
         <%= link_to "Danh Muc", admin_categories_url %>
       </li>
       <li>
-        <%= link_to t(".lily"), "#" %>
+        <%= link_to "San Pham", admin_products_url %>
+      </li>
+      <li>
+        <%= link_to "Comment", admin_comments_url %>
       </li>
     </ul>
   </li>

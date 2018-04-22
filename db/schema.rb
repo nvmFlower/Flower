@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410090057) do
+ActiveRecord::Schema.define(version: 20180422112315) do
 
-  create_table "bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "total_money"
     t.date "date_order"
     t.date "date_delivery"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_bills_on_user_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "colors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -46,19 +46,27 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "detail_bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "count"
-    t.integer "price"
-    t.bigint "bill_id"
-    t.bigint "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["bill_id"], name: "index_detail_bills_on_bill_id"
-    t.index ["product_id"], name: "index_detail_bills_on_product_id"
-  end
-
   create_table "occasions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "product_id"
+    t.integer "order_id"
+    t.float "unit_price", limit: 24
+    t.integer "quantity", default: 1
+    t.float "total_price", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "subtotal", limit: 24
+    t.float "total", limit: 24
+    t.float "tax", limit: 24
+    t.float "shipping", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -108,11 +116,10 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.integer "sale", default: 0
     t.text "details"
     t.integer "view"
-    t.integer "rating"
-    t.bigint "design_id"
+    t.float "rating", limit: 24, default: 5.0
+    t.integer "design_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["design_id"], name: "index_products_on_design_id"
   end
 
   create_table "ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -152,11 +159,9 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "bills", "users"
+  add_foreign_key "carts", "users"
   add_foreign_key "comments", "products"
   add_foreign_key "comments", "users"
-  add_foreign_key "detail_bills", "bills"
-  add_foreign_key "detail_bills", "products"
   add_foreign_key "posts", "users"
   add_foreign_key "product_colors", "colors"
   add_foreign_key "product_colors", "products"
@@ -164,7 +169,6 @@ ActiveRecord::Schema.define(version: 20180410090057) do
   add_foreign_key "product_occasions", "products"
   add_foreign_key "product_types", "products"
   add_foreign_key "product_types", "type_flowers"
-  add_foreign_key "products", "designs"
   add_foreign_key "ratings", "products"
   add_foreign_key "ratings", "users"
   add_foreign_key "sales", "occasions"

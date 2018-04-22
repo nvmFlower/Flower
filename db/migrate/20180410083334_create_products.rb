@@ -8,8 +8,9 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.integer :sale, default: 0
       t.text :details
       t.integer :view
-      t.integer :rating
-      t.references :design, index: true, foreign_key: true
+      t.float :rating, default: 5
+      t.integer :design_id
+
       t.timestamps
     end
   end

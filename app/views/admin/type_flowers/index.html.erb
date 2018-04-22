@@ -22,7 +22,7 @@
             <td><%= type_flower.created_at %></td>
             <td><%= type_flower.updated_at %></td>
             <td>
-              <%= link_to edit_admin_type_flower_path(type_flower) do %>
+              <%= link_to  edit_admin_type_flower_path(type_flower) do %>
               <i class="material-icons" style="font-size:24px">sync</i>
             <% end %>
             <%= link_to [:admin, type_flower], method: :delete, data: { confirm: t("confrim") } do %>
