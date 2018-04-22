@@ -6,7 +6,7 @@
     </div>
   <% end %>
 <%= form_for [:admin, object] do |f|%>
-  <%= f.label :name %>
+  <%= f.label :name, value: "Tên" %>
   <%= f.text_field :name, class: "form-control" %>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

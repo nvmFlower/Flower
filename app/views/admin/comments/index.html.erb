@@ -1,0 +1,27 @@
+<div class="container">
+
+    <table class="table table-bordered" id="" cellspacing="0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Ma Nguoi Dung</th>
+          <th>Noi Dung</th>
+          <th>Thoi gian</th>
+          <th>Xoa</th>
+        </tr>
+         <% @comments.each_with_index do |ob, index| %>
+          <tr>
+            <td><%= create_index params[:page], index, Settings.page %></td>
+            <td><%= ob.user_id %></td>
+            <td><%= ob.content %></td>
+            <td><%= ob.created_at %></td>
+            <td><%= link_to [:admin, ob], method: :delete,
+              data: { confirm: t("confrim") } do %>
+              <i class="fa fa-remove" style="font-size:24px;color:red"></i>
+              <% end %>
+            </td>
+          </tr>
+         <% end %>
+      </thead>
+    </table>
+</div>

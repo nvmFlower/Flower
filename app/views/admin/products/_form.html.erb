@@ -1,0 +1,88 @@
+ <div class="container">
+ <% flash.each do |key, value| %>
+    <div id="error_explanation">
+      <div class="alert alert-#{key}"><%= value %></div>
+    </div>
+  <% end %>
+
+  <div class="card mb-3">
+    <div class="card-header"><i class="fa fa-table"><%= yield(:title)%></i>
+      <div class="card-body">
+        <div class="table-responsive">
+
+            <%= form_for [:admin, @product] do |form| %>
+              <%= render "shared/errors", object: @product %>
+            <table class="table table-bordered" cellspacing="0">
+            <tbody>
+            <tr>
+              <th><%= form.label :name %></th>
+              <td><%= form.text_field :name, class: "form-control"%></td>
+            </tr>
+
+            <tr>
+              <th><%= form.label :img %></th>
+              <td> <%= form.file_field :img, accept: "image/jpeg,image/gif,image/png",
+                class: "form-control" %></td>
+            </tr>
+
+            <tr>
+              <th><%= form.label :sale %></th>
+              <td><%= form.number_field :sale , class: "form-control"%></td>
+            </tr>
+
+            <tr>
+               <th><%= form.label :price %></th>
+                <td><%= form.number_field :price , class: "form-control"%></td>
+            </tr>
+
+            <tr>
+              <th> <%= form.label :details %></th>
+              <td><%= form.text_area :details, class: "form-control" %></td>
+            </tr>
+
+            <tr>
+               <th><%= form.label :view %></th>
+              <td><%= form.number_field :view, class: "form-control" %></td>
+            </tr>
+
+            <tr>
+              <th>Kieu dang</th>
+              <td><%= form.collection_select :design_id, Design.all, :id, :name, include_blank: true %></td>
+            </tr>
+
+            <tr>
+              <th>Color</th>
+              <td><%= form.collection_check_boxes(:color_ids, Color.all,
+                :id, :name, checked: @product.colors.map(&:id)) do |b| %>
+                <%= b.check_box %> <%= b.label %>
+                <% end %></td>
+            </tr>
+
+             <tr>
+              <th>Loai Hoa</th>
+              <td><%= form.collection_check_boxes(:kind_ids, Kind.all,
+                :id, :name, checked: @product.kinds.map(&:id)) do |b| %>
+                <%= b.check_box %> <%= b.label %>
+                <% end %></td>
+            </tr>
+
+            <tr>
+               <th>Chu De</th>
+                <td><%= form.collection_check_boxes(:occasion_ids, Occasion.all,
+                  :id, :name, checked: @product.occasions.map(&:id)) do |b| %>
+                    <%= b.check_box %><%= b.label %>
+                  <% end %>
+                </td>
+            </tr>
+            </tbody>
+             <div class="actions"><%= form.submit yield(:button_text) %></div>
+          </table>
+
+      <%end%>
+
+
+    </div>
+    </div>
+  </div>
+</div>
+</div>
