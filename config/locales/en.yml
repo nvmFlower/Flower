@@ -17,6 +17,12 @@ en:
   name_shop: "Shop Flower"
   address: "11F, Handico Tower, Pham Hung, Nam Tu Liem, Ha Noi"
   bazon: "&copy; 2018 Flower"
+  update: "Update"
+  delete: "Delete"
+  content: "List of products"
+  stt: "STT"
+  save_changes: "Save_changes"
+  add: "Add"
   layout:
     admin:
       title: "Admin page"
@@ -32,7 +38,7 @@ en:
       sign_up: "Sign up"
       create_account: "Create my account"
       name: "Name"
-      address: "Address"
+      price: "Address"
       phone: "Phone Number"
       email: "Email"
       password: "Password"
@@ -57,16 +63,21 @@ en:
         lily: "Lily"
     product:
       index:
-        content: "List of products"
         table: "Table"
         name_table: "Name table"
         updated_time: "Updated yesterday at 11:59 PM"
         name: "Name"
-        position: "Position"
-        office: "Office"
-        age: "Age"
-        start_date: "Start date"
-        salary: "Salary"
+        price: "Price"
+        img: "Image"
+        sale: "Sale"
+        details: "Details"
+        view: "View"
+        rating: "Rating"
+    designs:
+      new:
+        name: "Name"
+        created_at: "Created_at"
+        updated_at: "Updated_at"
   layouts:
     header:
       logo: "The Flower"

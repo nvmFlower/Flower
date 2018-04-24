@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   post "/login", to: "session#create"
   get "/logout", to: "session#new"
   delete "/logout", to: "session#destroy"
+  get "/admin/designs", to: "admin/designs#index"
+  get "/admin/designs", to: "admin/designs#new"
+  post "/admin/designs", to: "admin/designs#create"
 
   root "pages#index"
   get "/occasions", to: "pages#topic"
@@ -25,5 +28,8 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :home, only: [:index]
     resources :products, only: [:index]
+    resources :users, only: [:index]
+    resources :colors, only: [:index]
+    resources :designs
   end
 end

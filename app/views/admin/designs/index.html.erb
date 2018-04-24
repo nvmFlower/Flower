@@ -1,0 +1,34 @@
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <%= link_to t(".content"), "#"%>
+      </li>
+      <li class="breadcrumb-item active"><%= t ".table" %></li>
+    </ol>
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" cellspacing="0">
+            <thead>
+              <tr>
+                <%= render "headerTable" %>
+              </tr>
+            </thead>
+            <tbody>
+              <% @designs.each_with_index do |item, index|%>
+              <tr>
+                <td><%= index_record index %></td>
+                <td><%= item.name %></td>
+                <td><%= item.created_at %></td>
+                <td><%= item.updated_at %></td>
+                <td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
