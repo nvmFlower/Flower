@@ -40,6 +40,9 @@ en:
     show:
       personal_information: "Personal information"
       history: "Transaction history"
+    edit:
+      edit: "Edit Infor"
+      save: "Save changes"
   admin:
     content: "Admin"
     home:

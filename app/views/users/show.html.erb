@@ -13,6 +13,7 @@
             <p class="item-info"><%= t ".email: " %><%= @user.email %></p>
             <p class="item-info"><%= t ".address: " %><%= @user.address %></p>
             <p class="item-info"><%= t ".phone: " %><%= @user.phone %></p>
+            <%= link_to t(".edit"), edit_user_path(current_user) %>
           </div>
         </div>
       </div>
