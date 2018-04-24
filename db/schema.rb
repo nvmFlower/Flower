@@ -144,6 +144,7 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.string "remember_digest"
     t.string "address"
     t.string "phone"
     t.boolean "is_admin", default: false
