@@ -1,5 +1,5 @@
 <div class="main-agileits">
-  <h2 class="sub-head"><%= t "login" %></h2>
+  <h2 class="sub-head"></h2>
     <div class="sub-main">
       <%= form_for :session, url: login_path do |f| %>
 
@@ -11,7 +11,7 @@
           <%= f.check_box :remember_me %>
           <span><%= t ".remember_password" %></span>
         <% end %>
-        <%= f.submit t("login"), class: "btn btn-primary btn-block" %>
+        <%= f.submit t(".login"), class: "btn btn-primary btn-block" %>
       <% end %>
       <div class="text-center">
         <%= link_to "signup", class: "d-block small mt-3" do %>

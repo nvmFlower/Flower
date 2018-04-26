@@ -1,0 +1,20 @@
+<div class="card-body">
+  <div class="table-responsive">
+    <table class="table table-bordered" id="" cellspacing="0">
+      <thead>
+        <tr>
+          <th><%= t "admin.categories.index"%></th>
+          <th><%= t ".name" %></th>
+          <th><%= t "admin.categories.created_at" %></th>
+        </tr>
+         <% object.each_with_index do |ob, index| %>
+          <tr>
+            <td><%= create_index params[:page], index, Settings.page %></td>
+            <td><%= ob.name %></td>
+            <td><%= ob.created_at %></td>
+          </tr>
+         <% end %>
+      </thead>
+    </table>
+  </div>
+</div>

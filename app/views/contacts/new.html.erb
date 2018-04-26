@@ -1,0 +1,51 @@
+<% provide :title, t(".contacts") %>
+<div id="fh5co-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-push-1 animate-box">
+        <div class="fh5co-contact-info">
+          <h3><%= t ".info-contact" %> </h3>
+          <ul>
+            <li class="address">Tòa nhà Handico <br> Đường Phạm Hùng, Hà Nội</li>
+            <li class="phone">
+              <%= link_to "+1001002003", "tel://123" %>
+            </li>
+            <li class="email">
+              <%= link_to "hivongsailam@gmail.com", "https://www.youtube.com/watch?v=hsyW2isXhsw" %>
+            </li>
+            <li class="url">
+             <%= link_to "flower", "https://www.facebook.com/" %>
+           </li>
+         </ul>
+       </div>
+     </div>
+     <div class="col-md-6 animate-box">
+      <h3><%= t ".contacts" %></h3>
+      <%= form_for @custom, url: root_path do |f|%>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <%= f.text_field :fname , class: "form-control", placeholder: "Your firstname" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :lname, class: "form-control", placeholder: "Your lastname" %>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-12">
+          <%= f.text_field :email , class: "form-control", placeholder: "Your email address" %>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-12">
+          <%= text_area_tag(:message, "", class: "form-control", placeholder: "Say something about us") %>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-12">
+          <%= f.submit "Send Message" , class: "btn btn-primary", placeholder: "Your email address" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

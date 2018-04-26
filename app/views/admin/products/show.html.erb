@@ -1,0 +1,17 @@
+<div class="container">
+<h1>Chi tiet san pham</h1>
+<div class="row">
+  <div class="col-lg-4">
+    <%= image_tag @product.img.url %>
+  </div>
+
+  <div class="col-lg-8">
+    <span>Name: </span><%= @product.name %></br>
+    <span>Price: </span><%= @product.price %></br>
+    <span>Sale: </span><%= @product.sale %></br>
+    <span>View: </span><%= @product.view %></br>
+  </div>
+</div>
+<%= link_to "Edit", edit_admin_product_path(@product) %>
+<%= link_to "Add", new_admin_product_path %>
+</div>

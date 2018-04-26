@@ -996,7 +996,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			float: left;
 			margin: 0;
 			padding: 0;
-			width: 33.33%;
+			width: 50%;
 			text-align: center;
 			list-style: none;
 			@include inline-block;
@@ -1021,6 +1021,10 @@ h1, h2, h3, h4, h5, h6, figure {
 			}
 		}
 	}
+	.overflow{
+		overflow: auto;
+	}
+
 	.fh5co-tab-content-wrap {
 		clear: both;
 		position: relative;
@@ -1032,6 +1036,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			width: 100%;
 			opacity: 0;
 			visibility: hidden;
+			height: 320px;
 			&.active {
 				opacity: 1;
 				visibility: visible;

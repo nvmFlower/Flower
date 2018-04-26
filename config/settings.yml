@@ -8,3 +8,4 @@ page: 10
 max_post: 140
 password:
   min_length: 6
+number_categories: 5

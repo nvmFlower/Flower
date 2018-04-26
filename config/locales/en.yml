@@ -3,6 +3,7 @@ en:
   seach: "Search"
   copyright: "Copyright © Your Website 2018"
   logout: "Logout"
+  login: "Login"
   danger: "Invalid email/password combination"
   no_user: "No user search"
   welcome: "Welcome"
@@ -17,6 +18,18 @@ en:
   name_shop: "Shop Flower"
   address: "11F, Handico Tower, Pham Hung, Nam Tu Liem, Ha Noi"
   bazon: "&copy; 2018 Flower"
+  not_found: "Not Found!"
+  confrim: "Are you sure???"
+  sign_up: "Sign up"
+  create_account: "Create my account"
+  name: "Name"
+  address: "Address"
+  phone: "Phone Number"
+  email: "Email"
+  password: "Password"
+  confirm_password: "Confirm Password"
+  edit: "Edit Infor"
+  save: "Save changes"
   layout:
     admin:
       title: "Admin page"
@@ -27,22 +40,11 @@ en:
       email: "Email address"
       password: "Password"
       remember_password: "Remember Password"
+      login: "Login"
   users:
-    new:
-      sign_up: "Sign up"
-      create_account: "Create my account"
-      name: "Name"
-      address: "Address"
-      phone: "Phone Number"
-      email: "Email"
-      password: "Password"
-      confirm_password: "Confirm Password"
     show:
       personal_information: "Personal information"
       history: "Transaction history"
-    edit:
-      edit: "Edit Infor"
-      save: "Save changes"
   admin:
     content: "Admin"
     home:
@@ -70,6 +72,33 @@ en:
         age: "Age"
         start_date: "Start date"
         salary: "Salary"
+    categories:
+      success: "Successfully!!!"
+      delete_succes: "Delete Successfully!"
+      delete_found: "Delete Found!"
+      index: "Index"
+      read_more: "Read more..."
+      color: "Color"
+      type: "Type"
+      design: "Design"
+      occasion: "Occasion"
+      created_at: "Create_at"
+      updated_at: "Update_at"
+      add: "Add "
+
+  login:
+    sessionsadmin:
+      index:
+        login: "Login"
+        register_account: "Register an Account"
+        forgot_password: "Forgot Password?"
+        email: "Email address"
+        password: "Password"
+        remember_password: "Remember Password"
+    users:
+      new:
+        sign_up: "Sign up"
+        create_account: "Create my account"
   layouts:
     header:
       logo: "The Flower"
@@ -77,6 +106,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       log-out: "Logout"
+      listpost: "List post"
       listpost: "List post"
     slide:
       purchase: "Purchase Now"
@@ -104,6 +134,41 @@ en:
       info-contact: "Contact Info"
       contact: "Contact"
     cart:
+      home: "Home"
+      tile: "Hot products"
+
+  designs:
+    show:
+      kind: "Style"
+
+  types:
+    show:
+      type: "Type of flowers"
+
+  occasions:
+    show:
+     topic: "Topic"
+
+  products:
+    show:
+      title: "Product details"
+      self: "Details"
+      decor: "Describe"
+      feedback: "Comment"
+      call: "The Flower"
+      add: "Add to cart"
+      content-call: "Funness and happiness"
+    _product:
+      sale: "Sale"
+      add: "Thêm vào giỏ hàng"
+      content-call: "Niềm vui và hạnh phúc"
+
+    contacts:
+      info-contact: "Thông tin liên hệ"
+      contact: "Liên hệ"
+
+  carts:
+    index:
       role: "Your cart"
       info: "Personal info"
       list: "List of products"
@@ -115,6 +180,8 @@ en:
       time: "Set time"
       status: "Status"
       pay: "Pay"
+      info: "Your information"
+
   posts:
     about:
       we: "About us"
@@ -127,3 +194,26 @@ en:
   products:
     sale: "Sale"
     contacts: "Contact"
+
+  contacts:
+    new:
+      contacts: "Contact"
+      info-contact: "Contact Infomation"
+  users:
+    show:
+      unpay: "Chưa nhận hàng"
+      inpay: "Đã nhận hàng"
+      email: "Email"
+      address: "Address"
+      number-phone: "Số điện thoại"
+      img: "Ảnh"
+      name: "Tên"
+      many: "Số lượng"
+      price: "Gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+
+    button:
+      create: "Create"
+      update: "Update"

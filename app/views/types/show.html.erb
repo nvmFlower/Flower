@@ -1,0 +1,12 @@
+<%= provide :title, t(".type") %>
+<%= render "layouts/slide" %>
+<div id="fh5co-product">
+  <div class="container">
+    <div class="row animate-box">
+      <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+        <h2><%= @types.name %></h2>
+      </div>
+    </div>
+   <%= render partial: "products/product", collection: @products, as: :p  %>
+  </div>
+</div>

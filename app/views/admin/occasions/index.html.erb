@@ -1,0 +1,40 @@
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i>&nbsp;<%= t "admin.categories.occasion"%>
+        <%= link_to t("admin.categories.add"), new_admin_occasion_path,
+          style: "float: right;" %>
+      </div>
+      <div class="card-body">
+  <div class="table-responsive">
+    <table class="table table-bordered" cellspacing="0">
+      <thead>
+        <tr>
+          <th><%= t "admin.categories.index"%></th>
+          <th><%= t ".name" %></th>
+          <th><%= t "admin.categories.created_at" %></th>
+          <th><%= t "admin.categories.updated_at" %></th>
+          <th><%= t "admin.categories.change" %></th>
+        </tr>
+         <% @occasions.each_with_index do |occasion, index| %>
+          <tr>
+            <td><%= create_index params[:page], index, Settings.page %></td>
+            <td><%= occasion.name %></td>
+            <td><%= occasion.created_at %></td>
+            <td><%= occasion.updated_at %></td>
+            <td>
+              <%= link_to edit_admin_occasion_path(occasion) do %>
+              <i class="material-icons" style="font-size:24px">sync</i>
+            <% end %>
+            <%= link_to [:admin, occasion], method: :delete, data: { confirm: t("confrim") } do %>
+              <i class="fa fa-remove" style="font-size:24px;color:red"></i>
+            <% end %>
+            </td>
+          </tr>
+         <% end %>
+      </thead>
+    </table>
+     <%= paginate @occasions %>
+  </div>
+</div>
+
+      </div>

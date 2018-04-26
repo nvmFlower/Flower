@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  has_many :bills, dependent: :destroy
-  has_many :rating, dependent: :destroy
+  before_save :email_dowcase
+  has_many :carts, dependent: :destroy
+  has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :posts, dependent: :destroy
-
   attr_accessor :remember_token
   VALID_PHONE_REGEX = /\A((\+841|01)[2689]|(\+849|09))[0-9]{8}\z/i
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -44,5 +44,10 @@ class User < ApplicationRecord
 
   def forget
     update_attributes remember_digest: nil
+  end
+
+  private
+  def email_dowcase
+    self.email = email.downcase
   end
 end

@@ -1,15 +1,12 @@
 /*
  *= require_self
- *= require sb-admin.scss
- *= require bootstrap.min
- *= require dataTables.bootstrap4
- *= require error_messages
- *= require font-awesome.min
- *= require sb-admin
- *= require style-singup
+ *= require admin/sb-admin
+ *= require admin/bootstrap.min
+ *= require admin/dataTables.bootstrap4
+ *= require admin/error_messages
+ *= require admin/font-awesome.min
+ *= require admin/style-singup
  *= require adminhome
  *= require custom
  *= require adminhome
- *= require custom
- *= require_directory "../../../vendor/assets/stylesheets/admin"
  */
