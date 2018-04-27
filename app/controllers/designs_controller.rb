@@ -1,7 +1,7 @@
 class DesignsController < ApplicationController
   def show
     @designs = Design.find_by id: params[:id]
-    @products = Product.where design_id: @designs.id
+    @products = Product.where(design_id: @designs.id).page(params[:page]).per(Settings.page)
   end
 
   private

@@ -1,0 +1,86 @@
+ <div class="container">
+ <% flash.each do |key, value| %>
+    <div id="error_explanation">
+      <div class="alert alert-#{key}">
+        <%= value %>
+      </div>
+    </div>
+  <% end %>
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"><%= yield(:title)%></i>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" cellspacing="0">
+            <tbody>
+            <%= form_for [:admin, @product] do |form| %>
+              <%= render "shared/errors", object: @product %>
+            <tr>
+              <th><%= form.label :name %></th>
+              <td><%= form.text_field :name, class: "form-control"%></td>
+            </tr>
+
+            <tr>
+              <th><%= form.label :img %></th>
+              <td> <%= form.file_field :img, accept: "image/jpeg,image/gif,image/png",
+                class: "form-control" %></td>
+            </tr>
+
+            <tr>
+              <th><%= form.label :sale %></th>
+              <td><%= form.number_field :sale , class: "form-control"%></td>
+            </tr>
+
+            <tr>
+               <th><%= form.label :price %></th>
+                <td><%= form.number_field :price , class: "form-control"%></td>
+            </tr>
+
+            <tr>
+              <th> <%= form.label :details %></th>
+              <td><%= form.text_area :details, class: "form-control" %></td>
+            </tr>
+
+            <tr>
+               <th><%= form.label :view %></th>
+              <td><%= form.number_field :view, class: "form-control" %></td>
+            </tr>
+
+            <tr>
+              <th><%= form.label :design %></th>
+              <td><% @list_designs.each do |design| %>
+                <%= form.radio_button :design_id, design.id.to_i %> <%= design.name %>
+                <% end %></td>
+            </tr>
+
+            <tr>
+              <th><%= fields_for(@product_occasion) do |ab| %>
+                <%= ab.label :occasion %></th>
+              <td><%= collection_check_boxes(:occasions, :id, @list_occasions, :id, :name, {}, {:multiple => true, class: "", id: ""}) %>
+                <% end %></td>
+            </tr>
+
+             <tr>
+              <th><%= fields_for(@product_type) do |ab| %>
+                <%= ab.label :type_flowers %></th>
+              <td><%= collection_check_boxes(:type_flowers, :id, @list_types, :id, :name, {}, {:multiple => true, class: "", id: ""}) %>
+                <% end %></td>
+            </tr>
+
+            <tr>
+               <th><%= fields_for(@product_color) do |ab| %>
+                <%= ab.label :color %></th>
+                <td><%= collection_check_boxes(:colors, :id, @list_colors, :id, :name, {}, {:multiple => true, class: "ui", id: "dropdown"}) %>
+            <% end %></td>
+            </tr>
+
+          </tbody>
+        </table>
+        <div class="actions"><%= form.submit yield(:button_text) %></div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

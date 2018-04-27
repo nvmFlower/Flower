@@ -14,23 +14,23 @@
     )
 end
 
+User.create(
+      name: "Lai Ba Vi",
+      email: "lai@gmail.com",
+      password: "123456",
+      password_confirmation: "123456",
+      address: "54 Le Van Luong, Cau Giay, Ha Noi",
+      phone: "01637589966",
+      is_admin: true
+    )
+
+
 3.times do |n|
   Design.create(name: Faker::Types.string
     )
 end
 
-Product.create!(
-    name: Faker::Name.name,
-    price: Faker::Number.between(200, 300),
-    img: "l1.jpg",
-    many_or_not: Faker::Boolean.boolean,
-    sale: Faker::Number.between(200, 300),
-    details: Faker::Lorem.sentences,
-    view: 5,
-    rating: Faker::Number.between(1, 3),
-    design_id: Faker::Number.between(1, 3) )
-
-10.times do |n|
+100.times do |n|
   Product.create(
     name: Faker::Name.name,
     price: Faker::Number.between(200, 300),
@@ -40,7 +40,9 @@ Product.create!(
     view: Faker::Number.between(1, 5),
     rating: Faker::Number.between(1, 3),
     design_id: Faker::Number.between(1, 3))
+end
 
+10.times do |n|
   Comment.create(
     content: Faker::Lorem.sentences,
     status: false,
@@ -79,13 +81,15 @@ end
     product_id: Faker::Number.between(1, 10),
     color_id: Faker::Number.between(1, 3),
     )
-  ProductOccasion.create(
-    product_id: Faker::Number.between(1, 10),
+end
+
+100.times do |n|
+ ProductOccasion.create(
+    product_id: Faker::Number.between(1, 100),
     occasion_id: Faker::Number.between(1, 3),
     )
-  ProductType.create(
-    product_id: Faker::Number.between(1, 10),
+ ProductType.create(
+    product_id: Faker::Number.between(1, 100),
     type_flower_id: Faker::Number.between(1, 3),
     )
 end
-

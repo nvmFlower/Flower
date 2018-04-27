@@ -47,32 +47,37 @@
         <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
           <ul>
             <li class="search">
+              <%= form_for :search ,
+              url: { controller: "searchs", action: "index" }, method: :get do |f| %>
               <div class="input-group">
-                <%= text_field :search, :product, placeholder: t(".search") %>
+                <%= f.text_field :object, value: "", placeholder: t(".search") %>
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                  <%= f.button name: "commit", type: "submit", class: "btn btn-primary" do %>
+                  <i class="icon-search"></i>
+                  <% end %>
                 </span>
               </div>
+              <% end %>
             </li>
             <li class="shopping-cart">
-              <%= link_to cart_path, class: "cart" do %>
-              <span><small>0</small><i class="icon-shopping-cart"></i></span>
+              <%= link_to carts_path, class: "cart" do %>
+              <span><small class="number-c"><%= many_carts %></small><i class="icon-shopping-cart"></i></span>
               <% end %>
             </li>
             <% if logged_in? %>
-              <li class="menu dropdown">
-                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-                  <span><i class="icon-user"></i></span>
-                <% end %>
-                <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
-                  <li><%= link_to t(".profile"), profile_path(current_user) %></li>
-                  <li>
-                    <%= link_to t(".log-out"), logout_path, method: :delete %>
-                  </li>
-                </ul>
-              </li>
+            <li class="menu dropdown">
+              <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+              <span><i class="icon-user"></i></span>
+              <% end %>
+              <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
+                <li><%= link_to t(".profile"), profile_path %></li>
+                <li>
+                  <%= link_to t(".log-out"), logout_path, method: :delete %>
+                </li>
+              </ul>
+            </li>
             <% else %>
-              <%= link_to t(".login"), login_path %>
+            <%= link_to t(".login"), login_path %>
             <% end %>
           </ul>
         </div>

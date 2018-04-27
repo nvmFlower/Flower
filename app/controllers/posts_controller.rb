@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.page(params[:page]).per(Settings.page)
   end
 
   def about
-    byebug
     @post = Post.first
     @author = User.find_by id: @post.user_id
   end

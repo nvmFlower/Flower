@@ -3,4 +3,5 @@ class ApplicationRecord < ActiveRecord::Base
   scope :list_all_name, ->{select :name}
   scope :sort_alpha, ->{order name: :asc}
 
+  include Category
 end

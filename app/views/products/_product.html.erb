@@ -8,15 +8,16 @@
         <div class="inner">
           <p>
             <%= link_to product_path(p), class: "icon" do %>
-            <i class="icon-shopping-cart"></i>
-            <% end %>
-            <%= link_to product_path(p), class: "icon" do %>
             <i class="icon-eye"></i>
             <% end %>
           </p>
         </div>
       </div>
       <div class="desc">
+        <%= form_for :session, url: {controller: "carts", action: "create"}, remote: true do |f| %>
+          <%= f.hidden_field :product_id, value: p.id %>
+          <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+        <% end %>
         <h3><%= link_to p.name, product_path(p.id) %></h3>
         <% if (p.sale != 0) %>
           <span class="price text">$<%= p.price %></span>
@@ -27,4 +28,5 @@
       </div>
     </div>
   </div>
+
 

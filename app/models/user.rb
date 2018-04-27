@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   before_save :email_dowcase
-  has_many :bills, dependent: :destroy
+  has_many :carts, dependent: :destroy
   has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :posts, dependent: :destroy

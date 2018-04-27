@@ -116,25 +116,53 @@ vi:
       list: "Danh sách sản phẩm"
       img: "Ảnh"
       name: "Tên"
+      name-customer: "Tên khách hàng"
       many: "Số lượng"
       price: "Gía"
       like: "Đánh gía"
       time: "Thời gian đặt"
       pay: "Thanh Toán"
+      total: "Tổng tiền"
+      email: "Email"
+      address: "Địa chỉ"
 
   posts:
     about:
-      we: "Về chúng tôi"
+      we: "About us"
     index:
-      list: "Danh sách bài viết"
-      more: "Xem thêm"
+      list: "List of articles"
+      more: "More info"
     show:
-      title: "Bài Viết"
-    content_post:
-      author: "Tác gỉa"
+      .title: "Nội dung bài viết"
+    _content_post:
+      .author: "Tác gỉa"
 
   contacts:
     new:
-      contacts: "Liên hệ"
-      info-contact: "Thông tin liên hệ"
+      contacts: "Contact"
+      info-contact: "Contact Infomation"
 
+  users:
+     show:
+      title: "Trang cá nhân"
+      personal_information: "Thông tin cá nhân"
+      history: "Lịch sử giao dịch"
+      id_bill: "Mã Hóa Đơn"
+      date_order: "Ngày đặt hàng"
+      date_delivery: "Ngày nhận hàng"
+      unpay: "Chưa nhận hàng"
+      inpay: "Đã nhận hàng"
+      email: "Email"
+      address: "Địa chỉ"
+      number-phone: "Số điện thoại"
+      img: "Ảnh"
+      name: "Tên"
+      many: "Số lượng"
+      price: "Gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+
+      button:
+        create: "Tạo mới"
+        update: "Cập nhật"

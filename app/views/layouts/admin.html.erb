@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title yield(:title) %></title>
+
+<head>
+    <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "admin", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "admin", "data-turbolinks-track": "reload" %>
-  </head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <%= render "admin/home/header" %>
-      <%= yield %>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <%= yield %>
+      </div>
+    </div>
     <%= render "admin/home/footer" %>
-  </body>
+</body>
+
 </html>

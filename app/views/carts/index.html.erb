@@ -5,7 +5,6 @@
       <div class="col-md-12">
         <h3 class="title-cart border-bot"><%= t ".list" %></h3>
         <div class="content">
-          <%= form_for @user, url: root_path do |f| %>
           <table class="table table-striped table-responsive">
             <thead>
               <tr>
@@ -15,14 +14,24 @@
                 <th><%= t ".price" %></th>
                 <th><%= t ".like" %></th>
                 <th><%= t ".time" %></th>
+                <th>Chỉnh sửa</th>
               </tr>
             </thead>
             <tbody>
+              <% @products_cart.each do |t| %>
               <tr>
-                <td><%= image_tag "l1.jpg", class: "img-pr text-center" %></td>
-                <td>Hoa Lá</td>
-                <td>2</td>
-                <td>20.000</td>
+                <td>
+                  <%= image_tag t.img, class: "img-pr text-center" %>
+                </td>
+                <td>
+                  <%= t.name %>
+                </td>
+                <%= form_for :item, url: { controller: "carts", action: "update"}, remote: true do |f| %>
+                <td class="width-price">
+                 <%= f.number_field :quantily, value: @order_cart["#{t.id}"].to_i,
+                 min:1 %>
+                </td>
+                <td><%= t.price %></td>
                 <td>
                   <i class="icon-star2"></i>
                   <i class="icon-star2"></i>
@@ -30,25 +39,50 @@
                   <i class="icon-star2"></i>
                 </td>
                 <td>
-                  20:00 28/3/201
+                  <%= @time["#{t.id}"] %>
+                </td>
+                <td>
+                  <%= f.hidden_field :id_product, value: "#{t.id}" %>
+                  <%= f.button "Update", type: "submit", class: 'btn btn-success sub btn-change-quantity' %>
+                  <%= link_to "Delete", carts_path(t.id) ,method: :delete, class: 'btn btn-danger sub', remote: true  %>
+                   <% end %>
                 </td>
               </tr>
+              <% end %>
             </tbody>
           </table>
         </div>
       </div>
+      <h3 class="text-right"><%= t ".total" %>: <span class="subtotal"><%= @subtotal %></span></h3>
+      <% if !logged_in? %>
+      <div class="alert alert-danger">Login to buy product</div>
+      <% else %>
       <div class="col-md-12 ">
         <div class="container">
           <h3 class="title-cart border-bot"><%= t ".info" %></h3>
-          <div class="col-md-4 col-sm-6">
-            <%= image_tag "banana.jpg", alt: "w", class: "img-info" %>
+          <div class="col-md-6 col-sm-12">
+            <p class="item-info"><%= t ".name-customer" %>: <%= current_user.name %></p>
+            <p class="item-info"><%= t ".email" %>: <%= current_user.email %> </p>
+            <p class="item-info"><%= t ".address" %>: <%= current_user.address %> </p>
+            <p class="item-info"><%= t ".total" %>: <span class="subtotal"><%= @subtotal %></span></p>
           </div>
-          <div class="col-md-6 col-sm-4">
-            <p class="item-info">Lai Bá Vĩ</p>
-            <p class="item-info"><%= t "show.email" %>: 017laibavi.wts@gmail.com </p>
-            <p class="item-info"><%= t "show.address" %>: Số 54 ngõ 125 Cầu Thang Máy , Cầu Giấy, Hà Nội </p>
-            <p class="item-info"><%= t "show.number-phone" %>: 214689753</p>
-            <%= f.submit t(".pay"), class: "btn btn-primary" %>
+          <div class="col-md-6 col-sm-12">
+              <%= form_for @order, url: {controller: "orders", action: "create"} do |f| %>
+                <%= render "shared/order_messages" %>
+                <p>
+                 <%= f.label :address, "Địa chỉ giao hàng" %>
+                 <%= f.text_field :address, class: "form_control" %>
+                </p>
+                <p>
+                  <%= f.label :date_delivery, "Ngày nhận" %>
+                  <%= f.date_field :date_delivery, class: "form_control" %>
+                </p>
+                <p>
+                  <%= f.hidden_field :total, value: @subtotal %>
+                  <%= f.hidden_field :user_id, value: current_user.id %>
+                </p>
+                <%= f.submit t(".pay"), class: "btn btn-primary" %>
+              <% end %>
           </div>
           <% end %>
         </div>
@@ -56,4 +90,6 @@
     </div>
   </div>
 </div>
+
+
 
