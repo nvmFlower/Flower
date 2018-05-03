@@ -30,6 +30,7 @@ en:
   confirm_password: "Confirm Password"
   edit: "Edit Infor"
   save: "Save changes"
+  delete: "Delete"
   layout:
     admin:
       title: "Admin page"
@@ -47,6 +48,19 @@ en:
       history: "Transaction history"
   admin:
     content: "Admin"
+    users:
+      _headerTable:
+        name: "Name"
+        address: "Address"
+        email: "Email"
+        phone: "Phone"
+        is_admin: "is_admin"
+        created_at: "Created_at"
+        updated_at: "Updated_at"
+        user: "Users"
+      index:
+        user: "Table user"
+        stt: "STT"
     home:
       _header:
       _headermenu:
@@ -57,6 +71,7 @@ en:
         alerts: "Alerts"
       _menu:
         home: "Home"
+        user: "Users"
         flower_type: "Flower type"
         rose: "Rose"
         lily: "Lily"

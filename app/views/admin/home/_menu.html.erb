@@ -6,6 +6,12 @@
       <span class="nav-link-text"><%= t ".home" %></span>
     <% end %>
   </li>
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <%= link_to "/admin/users", class: "nav-link" do %>
+      <i class="fa fa-fw fa-dashboard"></i>
+      <span class="nav-link-text"><%= t ".user" %></span>
+    <% end %>
+  </li>
   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
     <%= link_to "#collapseComponents", class: "nav-link nav-link-collapse collapsed",
       data: {toggle:"collapse", parent: "#exampleAccordion"} do %>

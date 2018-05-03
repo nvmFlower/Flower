@@ -31,9 +31,11 @@ Rails.application.routes.draw do
         resources :searchs
         resources :users
         resources :sessions
+
         namespace :admin do
         resources :home, only: [:index]
-        resources :products
+        resources :users, only: [:index]
+        resources :products, only: [:index]
         resources :colors
         resources :designs
         resources :occasions

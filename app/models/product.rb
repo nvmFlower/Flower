@@ -27,6 +27,7 @@ class Product < ApplicationRecord
       errors.add(:img, "Anh phai nho hon 5MB")
     end
   end
+
  def self.search search, id
     if search
       where(["name LIKE ?", "%#{search}"])
