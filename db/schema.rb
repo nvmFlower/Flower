@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410090057) do
+ActiveRecord::Schema.define(version: 20180422112315) do
 
   create_table "bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "total_money"
@@ -61,6 +61,29 @@ ActiveRecord::Schema.define(version: 20180410090057) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "unit_price", limit: 24
+    t.integer "quantity", default: 1
+    t.bigint "order_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
+  end
+
+  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "total", limit: 24
+    t.string "address"
+    t.boolean "status", default: false
+    t.datetime "date_order"
+    t.datetime "date_delivery"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -157,6 +180,9 @@ ActiveRecord::Schema.define(version: 20180410090057) do
   add_foreign_key "comments", "users"
   add_foreign_key "detail_bills", "bills"
   add_foreign_key "detail_bills", "products"
+  add_foreign_key "order_items", "orders"
+  add_foreign_key "order_items", "products"
+  add_foreign_key "orders", "users"
   add_foreign_key "posts", "users"
   add_foreign_key "product_colors", "colors"
   add_foreign_key "product_colors", "products"

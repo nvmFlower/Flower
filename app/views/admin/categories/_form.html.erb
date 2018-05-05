@@ -1,0 +1,12 @@
+<% flash.each do |key, value| %>
+    <div id="error_explanation">
+      <div class="alert alert-#{key}">
+        <%= value unless value.blank? %>
+      </div>
+    </div>
+  <% end %>
+<%= form_for [:admin, object] do |f|%>
+  <%= f.label :name, value: "Tên" %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

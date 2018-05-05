@@ -1,27 +1,44 @@
-<div class="content-wrapper">
-  <div class="container-fluid">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <%= link_to t(".content"), "#"%>
-      </li>
-      <li class="breadcrumb-item active"><%= t ".table" %></li>
-    </ol>
+  <div class="container">
     <div class="card mb-3">
       <div class="card-header">
-        <i class="fa fa-table"></i><%= t ".name_table" %></div>
+        <i class="fa fa-table"></i>San Pham
+         <%= link_to t("admin.categories.add"), new_admin_product_path,
+          style: "float: right;" %></div>
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" cellspacing="0">
-
+          <table class="table table-bordered" id="" cellspacing="0">
             <thead>
               <tr>
-                <th><%= t ".name" %></th>
-                <th><%= t ".position" %></th>
-                <th><%= t ".office" %></th>
-                <th><%= t ".age" %></th>
-                <th><%= t ".start_date" %></th>
-                <th><%= t ".salary" %></th>
+                <th>#</th>
+                <th>Anh</th>
+                <th>Ten</th>
+                <th>Gia</th>
+                <th>Sale</th>
+                <th>View</th>
+                <th>Tuy chon</th>
               </tr>
+              <% @products.each_with_index do |product, index| %>
+                <tr>
+                  <td><%= create_index params[:page], index, Settings.page %></td>
+                  <td class="imge"><%= image_tag product.img.url, class: "img-pr text-center" %></td>
+                  <td><%= product.name %></td>
+                  <td><%= product.price %></td>
+                  <td><%= product.sale %></td>
+                  <td><%= product.view %></td>
+                  <td>
+                    <%= link_to admin_product_path(product) do  %>
+                      <i class="fa fa-eye" style="font-size:24px; color: black"></i>
+                    <% end %>
+                    <%= link_to edit_admin_product_path(product) do %>
+                      <i class="material-icons" style="font-size:24px">sync</i>
+                    <% end %>
+                    <%= link_to [:admin, product], method: :delete,
+                      data: { confirm: t("confrim") } do %>
+                      <i class="fa fa-remove" style="font-size:24px;color:red"></i>
+                    <% end %>
+                  </td>
+                </tr>
+               <% end %>
             </thead>
           </table>
         </div>
@@ -29,4 +46,3 @@
       <div class="card-footer small text-muted"><%= t ".updated_time" %></div>
     </div>
   </div>
-</div>

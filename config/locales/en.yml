@@ -17,6 +17,9 @@ en:
   name_shop: "Shop Flower"
   address: "11F, Handico Tower, Pham Hung, Nam Tu Liem, Ha Noi"
   bazon: "&copy; 2018 Flower"
+  not_found: "Not Found!"
+  confrim: "Are you sure???"
+
   layout:
     admin:
       title: "Admin page"
@@ -67,6 +70,35 @@ en:
         age: "Age"
         start_date: "Start date"
         salary: "Salary"
+
+    categories:
+      success: "Successfully!!!"
+      delete_succes: "Delete Successfully!"
+      delete_found: "Delete Found!"
+      index: "Index"
+      read_more: "Read more..."
+      color: "Color"
+      type: "Type"
+      design: "Design"
+      occasion: "Occasion"
+      created_at: "Create_at"
+      updated_at: "Update_at"
+      add: "Add "
+
+  login:
+    sessionsadmin:
+      index:
+        login: "Login"
+        register_account: "Register an Account"
+        forgot_password: "Forgot Password?"
+        email: "Email address"
+        password: "Password"
+        remember_password: "Remember Password"
+    users:
+      new:
+        sign_up: "Sign up"
+        create_account: "Create my account"
+
   layouts:
     header:
       logo: "The Flower"
@@ -75,6 +107,10 @@ en:
       settings: "Settings"
       log-out: "Logout"
       listpost: "List post"
+      login: "Login"
+      listpost: "List post"
+      about: "About"
+      contact: "Contact"
     slide:
       purchase: "Purchase Now"
   pages:
@@ -103,6 +139,41 @@ en:
       info-contact: "Contact Info"
       contact: "Contact"
     cart:
+      home: "Home"
+      tile: "Hot products"
+
+  designs:
+    show:
+      kind: "Style"
+
+  types:
+    show:
+      type: "Type of flowers"
+
+  occasions:
+    show:
+     topic: "Topic"
+
+  products:
+    show:
+      title: "Product details"
+      self: "Details"
+      decor: "Describe"
+      feedback: "Comment"
+      call: "The Flower"
+      add: "Add to cart"
+      content-call: "Funness and happiness"
+    _product:
+      sale: "Sale"
+      add: "Thêm vào giỏ hàng"
+      content-call: "Niềm vui và hạnh phúc"
+
+    contacts:
+      info-contact: "Thông tin liên hệ"
+      contact: "Liên hệ"
+
+  carts:
+    index:
       role: "Your cart"
       info: "Personal info"
       list: "List of products"
@@ -114,16 +185,49 @@ en:
       time: "Set time"
       status: "Status"
       pay: "Pay"
+      info: "Your information"
+      total: "Total"
+      email: "Email"
+      address: "Address"
+      name-customer: "Custom Name"
+
   posts:
     about:
       we: "About us"
     index:
       list: "List of articles"
       more: "More info"
-    post:
-      title: "Flower"
+    show:
+      .title: "Content post"
+    _content_post:
+      .author: "Author"
+  contacts:
+    new:
+      contacts: "Contact"
+      info-contact: "Contact Infomation"
 
-  products:
-    sale: "Sale"
-    contacts: "Contact"
+  users:
+    show:
+      title: "Your profile"
+      personal_information: "personal_information"
+      history: "Payments History"
+      id_bill: "ID Bill"
+      date_order: "Date order"
+      date_delivery: "Date delivery"
+      total: "Total"
+      unpay: "unpay"
+      inpay: "inpay"
+      email: "Email"
+      address: "Address"
+      number-phone: "Number Phone"
+      img: "Image"
+      name: "Name"
+      many: "Quantity"
+      price: "Price"
+      like: "Like"
+      time: "Order Date"
+      status: "Status"
 
+    button:
+      create: "Create"
+      update: "Update"

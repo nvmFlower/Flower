@@ -1,24 +1,32 @@
- <div class="row">
   <div class="col-md-4 col-sm-6 text-center animate-box">
     <div class="product">
-      <%= image_tag "l1.jpg", alt: "flower", class: "img-product" %>
+      <%= image_tag p.img, alt: "flower", class: "img-product" %>
       <div class="product-grid">
-        <span class="sale"><%= t "products.sale" %></span>
+        <% if(p.sale != 0) %>
+        <span class="sale"><%= t ".sale" %></span>
+        <% end %>
         <div class="inner">
           <p>
-            <%= link_to details_path, class: "icon" do %>
-            <i class="icon-shopping-cart"></i>
-            <% end %>
-            <%= link_to details_path, class: "icon" do %>
+            <%= link_to product_path(p), class: "icon" do %>
             <i class="icon-eye"></i>
             <% end %>
           </p>
         </div>
       </div>
       <div class="desc">
-        <h3><%= link_to "Hauteville Concrete Rocking Chair", details_path %></h3>
-        <span class="price">$350</span>
+        <%= form_for :session, url: {controller: "carts", action: "create"}, remote: true do |f| %>
+          <%= f.hidden_field :product_id, value: p.id %>
+          <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+        <% end %>
+        <h3><%= link_to p.name, product_path(p.id) %></h3>
+        <% if (p.sale != 0) %>
+          <span class="price text">$<%= p.price %></span>
+          <span class="sale">$<%= p.sale %></span>
+        <% else %>
+          <span class="price">$<%= p.price %></span>
+        <% end %>
       </div>
     </div>
   </div>
-</div>
+
+
