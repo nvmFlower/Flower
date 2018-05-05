@@ -1,4 +1,4 @@
-<% provide :title, t("pages.home") %>
+<% provide :title, t(".home") %>
 <%= render "layouts/slide" %>
   <div id="fh5co-product">
     <div class="container">
@@ -7,7 +7,9 @@
           <h2><%= t ".tile" %></h2>
         </div>
       </div>
-      <%= render "products/product" %>
+      <div class="row">
+      <%= render partial: "products/product", collection: @products, as: :p  %>
+      </div>
     </div>
   </div>
 

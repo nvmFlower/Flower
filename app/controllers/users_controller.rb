@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-   @user = User.find_by id: params[:id]
+   @order = Order.where user_id: current_user.id
   end
 
   def new
@@ -25,16 +25,16 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     if @user.update_attributes(user_params)
       flash[:success] = "User updated"
-      redirect_to root_url
+      redirect_to profile_url
     else
       render :edit
     end
-  end
-
+end
   private
 
   def user_params
     params.require(:user).permit :name, :address, :email, :phone, :password,
       :password_confirmation
   end
+
 end

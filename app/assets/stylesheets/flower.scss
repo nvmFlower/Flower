@@ -16,6 +16,17 @@
     text-decoration: none;
   }
 }
+.width-price{
+  width: 10%;
+}
+
+.sub{
+  width: 50%;
+}
+
+.text{
+  text-decoration: line-through;
+}
 
 .firts-side{
   background: url('img_bg_1.jpg');
@@ -44,6 +55,10 @@
   position: relative;
 }
 
+.product{
+  position: relative;
+}
+
 .img-product{
   position: absolute !important;
   left: 0;
@@ -58,7 +73,7 @@
 }
 
 #fh5co-product{
-  padding-top: 30px !important;
+  padding-top: 100px !important;
 }
 
 .owl-fix{
@@ -70,10 +85,6 @@
 .title-cart{
   color: $black_50;
   font-size: 18px;
-}
-
-.pad{
-  padding: 50px 30px !important;
 }
 
 .border-bot{
@@ -88,6 +99,10 @@
   a{
     float: right;
   }
+}
+
+.item-info{
+  margin-bottom: 15px;
 }
 
 .item-info{
@@ -115,9 +130,18 @@
   }
 }
 
+.sale{
+  padding-left: 7px;
+  color: red;
+}
+
 .image-detail{
   width: 200px;
   height: 500px;
+}
+
+.icon-star2{
+  color: $selective_yellow;
 }
 
 .icon-star2{
@@ -142,6 +166,13 @@ td{
   vertical-align: middle !important;
 }
 
+th{
+  font-weight: 400 !important;
+}
+td{
+  vertical-align: middle !important;
+}
+
 .blue{
   background: $color_dodger_blue_approx;
   color: $brand-white;
@@ -150,4 +181,16 @@ td{
 .red{
   background: $color_red_orange_approx;
   color: $brand-white;
+}
+.margin-bottom{
+  margin-bottom: 40px;
+}
+
+.pagination{
+  display: block;
+  text-align: center;
+}
+
+.in{
+  display: table !important;
 }

@@ -1,0 +1,177 @@
+vi:
+  flower: "Hoa"
+  seach: "Tìm kiếm"
+  copyright: "Copyright © Your Website 2018"
+  login: "Đăng nhập"
+  danger: "Email/password không hợp lệ"
+  no_user: "Không tìm thấy người dùng"
+  welcome: "Chào mừng"
+  form_contains: "Nội dung biểu mẫu"
+  logout: "Đăng xuất"
+  content: "Quản trị"
+  topic: "Chủ đề"
+  type: "Loại hoa"
+  fashion: "Kiểu dáng"
+  about: "Giới thiệu"
+  contact: "Liên hệ"
+  h-contact: "Liên hệ với chúng tôi"
+  name_shop: "Shop hoa Flower"
+  address: "Tầng 11, Tòa nhà Handico, đường Phạm Hùng, Hà Nội"
+  bazon: "&copy; 2018 là phải có hoa"
+
+  sign_up: "Đăng ký"
+  create_account: "Tạo tài khoản"
+  name: "Tên"
+  address: "Địa chỉ"
+  phone: "Sổ điện thoại"
+  email: "Email"
+  password: "Mật khẩu"
+  confirm_password: "Xác nhận mật khẩu"
+  sign_up: "Đăng ký"
+  create_account: "Tạo tài khoản"
+
+  edit: "Chỉnh sửa thông tin"
+  save: "Lưu thay đổi"
+
+  layout:
+    admin:
+      title: "Trang quản trị"
+  session:
+    new:
+      register_account: "Đăng ký tài khoản"
+      forgot_password: "Quên mật khẩu?"
+      email: "Địa chỉ email"
+      password: "Mật khẩu"
+      remember_password: "Nhớ mật khẩu"
+  users:
+    new:
+      sign_up: "Đăng ký"
+      create_account: "Tạo tài khoản"
+    show:
+      personal_information: "Thông tin cá nhân"
+      history: "Lich sử "
+  admin:
+    home:
+      headermenu:
+        placeholder: "Tìm kiếm..."
+        messages: "Tin nhắn"
+        new: "Mới"
+        new_messages: "Tin nhắn mới:"
+        alerts: "Cảnh báo"
+      menu:
+        home: "Trang chủ"
+        flower_type: "Loại hoa"
+        rose: "Hoa hồng"
+        lily: "Hoa ly"
+    product:
+      index:
+        content: "Danh sách sản phẩm"
+        table: "Bảng"
+        name_table: "Tên bảng"
+        updated_time: "Cập nhập lúc 11:59 PM"
+        name: "Tên"
+        position: "Chức vụ"
+        office: "Văn phòng"
+        age: "Tuổi"
+        start_date: "Ngày bắt đầu"
+        salary: "Lương"
+  layouts:
+    header:
+      logo: "Hoa"
+      search: "Tìm kiếm..."
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      log-out: "Đăng xuất"
+      login: "Đăng nhập"
+      listpost: "Bài viết"
+      about: "Về chúng tôi"
+      contact: "Liên hệ"
+    slide:
+      purchase: "Mua hàng"
+
+  pages:
+    index:
+      home: "Trang chủ"
+      tile: "Sản phẩm tiêu biểu"
+
+  designs:
+    show:
+      kind: "Kiểu dáng"
+
+  types:
+    show:
+      type: "Loại hoa"
+
+  occasions:
+    show:
+     topic: "Chủ đề"
+
+  products:
+    show:
+      title: "Chi tiết sản phẩm"
+      self: "Chi tiết sản phẩm"
+      decor: "Miêu tả"
+      feedback: "Đánh gía"
+      call: "The Flower"
+      add: "Thêm vào rỏ hàng"
+      content-call: "Vui vẻ và hạnh phúc"
+    _product:
+      sale: "Sale"
+
+  carts:
+    index:
+      role: "Rỏ hàng của bạn"
+      info: "Thông tin của khách hàng "
+      list: "Danh sách sản phẩm"
+      img: "Ảnh"
+      name: "Tên"
+      name-customer: "Tên khách hàng"
+      many: "Số lượng"
+      price: "Gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      pay: "Thanh Toán"
+      total: "Tổng tiền"
+      email: "Email"
+      address: "Địa chỉ"
+
+  posts:
+    about:
+      we: "About us"
+    index:
+      list: "List of articles"
+      more: "More info"
+    show:
+      .title: "Nội dung bài viết"
+    _content_post:
+      .author: "Tác gỉa"
+
+  contacts:
+    new:
+      contacts: "Contact"
+      info-contact: "Contact Infomation"
+
+  users:
+     show:
+      title: "Trang cá nhân"
+      personal_information: "Thông tin cá nhân"
+      history: "Lịch sử giao dịch"
+      id_bill: "Mã Hóa Đơn"
+      date_order: "Ngày đặt hàng"
+      date_delivery: "Ngày nhận hàng"
+      unpay: "Chưa nhận hàng"
+      inpay: "Đã nhận hàng"
+      email: "Email"
+      address: "Địa chỉ"
+      number-phone: "Số điện thoại"
+      img: "Ảnh"
+      name: "Tên"
+      many: "Số lượng"
+      price: "Gía"
+      like: "Đánh gía"
+      time: "Thời gian đặt"
+      status: "Trạng thái"
+
+      button:
+        create: "Tạo mới"
+        update: "Cập nhật"

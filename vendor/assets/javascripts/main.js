@@ -13,15 +13,13 @@ $(document).on('turbolinks:load', function(){
 
     			$('body').removeClass('offcanvas');
     			$('.js-fh5co-nav-toggle').removeClass('active');
-
 	    	}
-
-
 	    }
 		});
 
 	};
 
+	$(".gap").text(' ... ')
 
 	var offcanvasMenu = function() {
 
@@ -66,6 +64,13 @@ $(document).on('turbolinks:load', function(){
 		});
 	};
 
+
+  $(".cart").on("click", function() {
+     location.reload();
+     console.log("sas");
+   });
+
+  $('body').on('click', '.btn-change-quantity')
 
 	var burgerMenu = function() {
 
@@ -165,7 +170,6 @@ $(document).on('turbolinks:load', function(){
 						tabHeight = $('.fh5co-tab-nav').outerHeight(),
 						formActiveHeight = $('.tab-content.active').outerHeight(),
 						totalHeight = parseInt(tabHeight + formActiveHeight + 90);
-
 						tabContentWrap.css('height', totalHeight );
 				});
 

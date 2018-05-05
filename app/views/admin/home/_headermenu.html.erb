@@ -27,13 +27,11 @@
     <% end %>
   </li>
   <li class="nav-item">
-    <%= form_for :home, url: "" do |f| %>
+     <%= form_tag admin_searchs_url, :method => "get" do %>
       <div class="input-group">
-        <%= f.text_field :search, class: "form-control", placeholder: t("admin.home._headermenu.placeholder") %>
+        <%= text_field_tag :search, params[:search],class: "form-control" %>
         <span class="input-group-append">
-          <%= button_tag class:"btn btn-primary" do %>
-            <i class="fa fa-search"></i>
-          <% end %>
+          <%= submit_tag "Search", :name => nil %>
         </span>
       </div>
     <% end %>

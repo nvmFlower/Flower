@@ -6,40 +6,40 @@
           <div id="fh5co-logo">
             <%= link_to t(".logo"), root_path, class: "logo" %>
           </div>
+          <%= link_to "English", locale:"en" %>
+          <%= link_to "Vietnamese", locale:"vi" %>
         </div>
         <div class="col-md-6 col-xs-6 text-center menu-1">
           <ul>
             <li class="has-dropdown">
               <%= link_to t("topic"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav row" id="ocs">
+                <% @occasions.each do |o| %>
                 <li>
-                  <%= link_to "Ngày 8/3", occasions_path, class: "col-md-3" %>
+                  <%= link_to o.name, occasion_path(o), class: "col-md-3", data: {id: o.id} %>
                 </li>
-                <li>
-                  <%= link_to "Ngày 8/3", occasions_path, class: "col-md-3" %>
-                </li>
-                <li>
-                  <%= link_to "Ngày 8/3", occasions_path, class: "col-md-3" %>
-                </li>
+                <% end %>
               </ul>
             </li>
             <li class="has-dropdown">
               <%= link_to t("type"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav ">
+                <% @type_flower.each do |t| %>
                 <li>
-                  <%= link_to "Hoa hồng", types_path, class: "col-md-3" %>
+                  <%= link_to t.name, type_path(t), class: "col-md-3" %>
                 </li>
+                <% end %>
               </ul>
             </li>
             <li class="has-dropdown">
               <%= link_to t("fashion"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav">
-                <li><%= link_to "Bó Hoa", fashion_path, class: "col-md-3" %></li>
-                <li><%= link_to "Lãng Hoa", fashion_path, class: "col-md-3" %></li>
-                <li><%= link_to "Giỏ Hoa", fashion_path, class: "col-md-3" %></li>
+                <% @design.each do |d| %>
+                <li><%= link_to d.name, design_path(d), class: "col-md-3" %></li>
+                <% end %>
               </ul>
             </li>
-            <li><%= link_to t(".listpost"), list_post_path, class: "item-nav" %></li>
+            <li><%= link_to t(".listpost"), posts_path, class: "item-nav" %></li>
             <li><%= link_to t(".about"), about_path, class: "item-nav" %></li>
             <li><%= link_to t(".contact"), contacts_path, class: "item-nav" %></li>
           </ul>
@@ -47,35 +47,41 @@
         <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
           <ul>
             <li class="search">
+              <%= form_for :search ,
+              url: { controller: "searchs", action: "index" }, method: :get do |f| %>
               <div class="input-group">
-                <%= text_field :search, :product, placeholder: t(".search") %>
+                <%= f.text_field :object, value: "", placeholder: t(".search") %>
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                  <%= f.button name: "commit", type: "submit", class: "btn btn-primary" do %>
+                  <i class="icon-search"></i>
+                  <% end %>
                 </span>
               </div>
+              <% end %>
             </li>
             <li class="shopping-cart">
-              <%= link_to cart_path, class: "cart" do %>
-              <span><small>0</small><i class="icon-shopping-cart"></i></span>
+              <%= link_to carts_path, class: "cart" do %>
+              <span><small class="number-c"><%= many_carts %></small><i class="icon-shopping-cart"></i></span>
               <% end %>
             </li>
             <% if logged_in? %>
               <li class="menu dropdown">
                 <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-                  <span><i class="icon-user"></i></span>
+                <span><i class="icon-user"></i></span>
                 <% end %>
                 <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
-                  <li><%= link_to t(".profile"), current_user %></li>
+                  <li><%= link_to t(".profile"), profile_path %></li>
                   <li>
                     <%= link_to t(".log-out"), logout_path, method: :delete %>
                   </li>
                 </ul>
               </li>
             <% else %>
-              <%= link_to t("login"), login_path %>
+              <%= link_to t(".login"), login_path %>
             <% end %>
           </ul>
         </div>
       </div>
     </div>
   </nav>
+

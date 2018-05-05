@@ -37,6 +37,9 @@ body.fixed-nav {
   line-height: 45px;
 }
 
+.imge{
+  width: 25%;
+}
 .scroll-to-top:focus, .scroll-to-top:hover {
   color: white;
 }

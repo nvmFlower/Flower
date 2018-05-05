@@ -1,17 +1,17 @@
 <%= form_for(@user) do |f| %>
   <%= render "shared/error_messages" %>
 
-  <%= f.text_field :name, class: "name", placeholder: t("users.new.name") %>
+  <%= f.text_field :name, class: "name", placeholder: t("name") %>
 
-  <%= f.text_field :address, class: "name2", placeholder: t("users.new.address") %>
+  <%= f.text_field :address, class: "name2", placeholder: t("address") %>
 
-  <%= f.text_field :phone, class: "number", placeholder: t("users.new.phone") %>
+  <%= f.text_field :phone, class: "number", placeholder: t("phone") %>
 
-  <%= f.text_field :email, class: "mail", placeholder: t("users.new.email") %>
+  <%= f.text_field :email, class: "mail", placeholder: t("email") %>
 
-  <%= f.password_field :password, class: "pass", placeholder: t("users.new.password") %>
+  <%= f.password_field :password, class: "pass", placeholder: t("password") %>
 
-  <%= f.password_field :password_confirmation, class: "pass", placeholder: t("users.new.confirm_password") %>
+  <%= f.password_field :password_confirmation, class: "pass", placeholder: t("confirm_password") %>
 
   <%= submit_tag yield(:button_text) %>
 <% end %>
