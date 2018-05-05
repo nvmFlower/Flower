@@ -89,6 +89,8 @@ en:
     topic: "Topic"
 
     home: The Flower"
+
+    home: The Flower"
     details:
       title: "Product details"
       self: "Chi tiết sản phẩm"
@@ -124,3 +126,4 @@ en:
   products:
     sale: "Sale"
     contacts: "Contact"
+
