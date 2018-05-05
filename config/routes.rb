@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
         root "pages#index"
         get "/contacts", to: "contacts#new"
-        get "/cart", to: "carts#index"
+        get "/carts", to: "carts#index"
+        post "/cart", to: "carts#create"
+        post "/carts/update", to: "carts#update"
+        delete "/:id/carts", to: "carts#destroy"
         get "/profile", to: "users#show"
         get "/admin", to: "admin/home#index"
         get "/signup", to: "users#new"
@@ -21,16 +24,15 @@ Rails.application.routes.draw do
         resources :users
         resources :sessions
         resources :occasions, only: [:show]
-        resources :types, only: [:show]
+        resources :kinds, only: [:show]
         resources :designs, only: [:show]
         resources :posts, only: [:index, :show]
         resources :contacts, only: [:new, :create]
         resources :products, only: [:show]
-        resources :carts
         resources :order_items
         resources :orders
-        resources :carts, only: [:show]
         resources :searchs
+        resources :comments
     end
 
     namespace :admin do

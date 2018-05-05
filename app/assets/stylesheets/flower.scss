@@ -16,6 +16,13 @@
     text-decoration: none;
   }
 }
+.width-price{
+  width: 10%;
+}
+
+.sub{
+  width: 50%;
+}
 
 .text{
   text-decoration: line-through;
@@ -78,14 +85,6 @@
 .title-cart{
   color: $black_50;
   font-size: 18px;
-}
-
-.pad{
-  padding: 50px 30px !important;
-}
-
-.pad{
-  padding: 50px 30px !important;
 }
 
 .border-bot{
@@ -182,4 +181,16 @@ td{
 .red{
   background: $color_red_orange_approx;
   color: $brand-white;
+}
+.margin-bottom{
+  margin-bottom: 40px;
+}
+
+.pagination{
+  display: block;
+  text-align: center;
+}
+
+.in{
+  display: table !important;
 }

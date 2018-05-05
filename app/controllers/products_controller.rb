@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
     @product.save
     @product = Product.find_by id: params[:id]
     @comment = Comment.where product_id: params[:id]
+
   end
 
   private

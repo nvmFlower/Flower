@@ -1,19 +1,21 @@
  <div class="container">
  <% flash.each do |key, value| %>
     <div id="error_explanation">
-      <div class="alert alert-#{key}"><%= value %></div>
+      <div class="alert alert-#{key}">
+        <%= value %>
+      </div>
     </div>
   <% end %>
 
-  <div class="card mb-3">
-    <div class="card-header"><i class="fa fa-table"><%= yield(:title)%></i>
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"><%= yield(:title)%></i>
       <div class="card-body">
         <div class="table-responsive">
-
+          <table class="table table-bordered" cellspacing="0">
+            <tbody>
             <%= form_for [:admin, @product] do |form| %>
               <%= render "shared/errors", object: @product %>
-            <table class="table table-bordered" cellspacing="0">
-            <tbody>
             <tr>
               <th><%= form.label :name %></th>
               <td><%= form.text_field :name, class: "form-control"%></td>
@@ -63,6 +65,7 @@
               <td><%= form.collection_check_boxes(:kind_ids, Kind.all,
                 :id, :name, checked: @product.kinds.map(&:id)) do |b| %>
                 <%= b.check_box %> <%= b.label %>
+
                 <% end %></td>
             </tr>
 
@@ -82,6 +85,7 @@
 
 
     </div>
+
     </div>
   </div>
 </div>

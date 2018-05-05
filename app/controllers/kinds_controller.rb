@@ -1,7 +1,7 @@
 class KindsController < ApplicationController
   def show
     @types = Kind.find_by id: params[:id]
-    @products = Kind.find_by(id: params[:id]).type_product
+    @products = @types.products.page(params[:page]).per(Settings.page)
   end
 
   def kind_params

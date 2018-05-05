@@ -162,6 +162,10 @@ en:
       status: "Status"
       pay: "Pay"
       info: "Your information"
+      total: "Total"
+      email: "Email"
+      address: "Address"
+      name-customer: "Custom Name"
 
   posts:
     about:
@@ -169,6 +173,10 @@ en:
     index:
       list: "List of articles"
       more: "More info"
+    show:
+      .title: "Content post"
+    _content_post:
+      .author: "Author"
 
   contacts:
     new:
@@ -179,18 +187,25 @@ en:
 
   users:
     show:
-      unpay: "Chưa nhận hàng"
-      inpay: "Đã nhận hàng"
+      title: "Your profile"
+      personal_information: "personal_information"
+      history: "Payments History"
+      id_bill: "ID Bill"
+      date_order: "Date order"
+      date_delivery: "Date delivery"
+      total: "Total"
+      unpay: "unpay"
+      inpay: "inpay"
       email: "Email"
       address: "Address"
-      number-phone: "Số điện thoại"
-      img: "Ảnh"
-      name: "Tên"
-      many: "Số lượng"
-      price: "Gía"
-      like: "Đánh gía"
-      time: "Thời gian đặt"
-      status: "Trạng thái"
+      number-phone: "Number Phone"
+      img: "Image"
+      name: "Name"
+      many: "Quantity"
+      price: "Price"
+      like: "Like"
+      time: "Order Date"
+      status: "Status"
 
     button:
       create: "Create"

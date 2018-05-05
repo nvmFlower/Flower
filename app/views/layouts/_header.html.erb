@@ -26,7 +26,7 @@
               <ul class="dropdown list-nav ">
                 <% @kind.each do |t| %>
                 <li>
-                  <%= link_to t.name, type_path(t), class: "col-md-3" %>
+                  <%= link_to t.name, kind_path(t), class: "col-md-3" %>
                 </li>
                 <% end %>
               </ul>
@@ -49,31 +49,39 @@
 
             <%= form_tag searchs_url, :method => "get" do %>
             <li class="search">
+              <%= form_for :search ,
+              url: { controller: "searchs", action: "index" }, method: :get do |f| %>
               <div class="input-group">
-                <%= text_field_tag :search, params[:search] %>
-                <div class="actions"><%= submit_tag "Search", :name => nil %></div>
+
+                <%= f.text_field :object, value: "", placeholder: t(".search") %>
+                <span class="input-group-btn">
+                  <%= f.button name: "commit", type: "submit", class: "btn btn-primary" do %>
+                  <i class="icon-search"></i>
+                  <% end %>
+                </span>
               </div>
+              <% end %>
             </li>
             <%end%>
             <li class="shopping-cart">
               <%= link_to carts_path, class: "cart" do %>
-              <span><small><%= current_order.order_items.size %></small><i class="icon-shopping-cart"></i></span>
+              <span><small class="number-c"><%= many_carts %></small><i class="icon-shopping-cart"></i></span>
               <% end %>
             </li>
             <% if logged_in? %>
-              <li class="menu dropdown">
-                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-                  <span><i class="icon-user"></i></span>
-                <% end %>
-                <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
-                  <li><%= link_to t(".profile"), profile_path(current_user) %></li>
-                  <li>
-                    <%= link_to t(".log-out"), logout_path, method: :delete %>
-                  </li>
-                </ul>
-              </li>
+            <li class="menu dropdown">
+              <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+              <span><i class="icon-user"></i></span>
+              <% end %>
+              <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenuButton">
+                <li><%= link_to t(".profile"), profile_path %></li>
+                <li>
+                  <%= link_to t(".log-out"), logout_path, method: :delete %>
+                </li>
+              </ul>
+            </li>
             <% else %>
-              <%= link_to t(".login"), login_path %>
+            <%= link_to t(".login"), login_path %>
             <% end %>
           </ul>
         </div>

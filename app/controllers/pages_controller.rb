@@ -8,4 +8,7 @@ class PagesController < ApplicationController
 
     @products = search.result
   end
+  def show
+    @products = search.result
+  end
 end

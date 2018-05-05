@@ -28,7 +28,6 @@ class Admin::ProductsController < Admin::ApplicationController
 
   def edit; end
 
-
   def update
     if @product.update_attributes product_params
       render :show

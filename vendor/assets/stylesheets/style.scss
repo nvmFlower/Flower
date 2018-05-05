@@ -1024,6 +1024,8 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	.overflow{
 		overflow: auto;
+		height: 320px;
+
 	}
 
 	.fh5co-tab-content-wrap {
@@ -1037,7 +1039,6 @@ h1, h2, h3, h4, h5, h6, figure {
 			width: 100%;
 			opacity: 0;
 			visibility: hidden;
-			height: 320px;
 			&.active {
 				opacity: 1;
 				visibility: visible;
@@ -1764,4 +1765,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	.js & {
 		opacity: 0;
 	}
+}
+
+.width-height{
+	width: 556px !important;
+	height: 300px !important;
 }
