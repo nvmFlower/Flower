@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
+  attr_accessor :date_order
   has_many :order_items
   belongs_to :user
 

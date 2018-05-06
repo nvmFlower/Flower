@@ -1,17 +1,20 @@
 <div class="container">
 <h1>Chi tiet san pham</h1>
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-lg-1">
     <%= image_tag @product.img.url %>
   </div>
 
   <div class="col-lg-8">
     <span>Name: </span><%= @product.name %></br>
-     <span>Price: </span><%= @product.price %></br>
-      <span>Sale: </span><%= @product.sale %></br>
-      <span>View: </span><%= @product.view %></br>
+    <span>Price: </span><%= @product.price %></br>
+    <span>Sale: </span><%= @product.sale %></br>
+    <span>View: </span><%= @product.view %></br>
+    <p>The loai: <%= @product.kinds.map(&:name).join(',') %></p>
+
   </div>
 </div>
 <%= link_to "Edit", edit_admin_product_path(@product) %>
-<%= link_to "Add", new_admin_product_path %>
+<%= link_to "Back", admin_products_path %>
+
 </div>

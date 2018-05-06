@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
-
   def create
     product_id = params[:com][:product_id]
     user_id = params[:user]
     if logged_in?
-      @comment = current_user.comments.build(comment_params)
+      @comment = current_user.comments.build comment_params
       if @comment.save
         respond_to do |format|
           format.html

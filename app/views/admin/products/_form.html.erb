@@ -48,38 +48,44 @@
             </tr>
 
             <tr>
-              <th><%= form.label :design %></th>
-              <td><% @list_designs.each do |design| %>
-                <%= form.radio_button :design_id, design.id.to_i %> <%= design.name %>
-                <% end %></td>
+              <th>Kieu dang</th>
+              <td><%= form.collection_select :design_id, Design.all, :id, :name, include_blank: true %></td>
             </tr>
 
             <tr>
-              <th><%= fields_for(@product_occasion) do |ab| %>
-                <%= ab.label :occasion %></th>
-              <td><%= collection_check_boxes(:occasions, :id, @list_occasions, :id, :name, {}, {:multiple => true, class: "", id: ""}) %>
+              <th>Color</th>
+              <td><%= form.collection_check_boxes(:color_ids, Color.all,
+                :id, :name, checked: @product.colors.map(&:id)) do |b| %>
+                <%= b.check_box %> <%= b.label %>
                 <% end %></td>
             </tr>
 
              <tr>
-              <th><%= fields_for(@product_type) do |ab| %>
-                <%= ab.label :type_flowers %></th>
-              <td><%= collection_check_boxes(:type_flowers, :id, @list_types, :id, :name, {}, {:multiple => true, class: "", id: ""}) %>
+              <th>Loai Hoa</th>
+              <td><%= form.collection_check_boxes(:kind_ids, Kind.all,
+                :id, :name, checked: @product.kinds.map(&:id)) do |b| %>
+                <%= b.check_box %> <%= b.label %>
+
                 <% end %></td>
             </tr>
 
             <tr>
-               <th><%= fields_for(@product_color) do |ab| %>
-                <%= ab.label :color %></th>
-                <td><%= collection_check_boxes(:colors, :id, @list_colors, :id, :name, {}, {:multiple => true, class: "ui", id: "dropdown"}) %>
-            <% end %></td>
+               <th>Chu De</th>
+                <td><%= form.collection_check_boxes(:occasion_ids, Occasion.all,
+                  :id, :name, checked: @product.occasions.map(&:id)) do |b| %>
+                    <%= b.check_box %><%= b.label %>
+                  <% end %>
+                </td>
             </tr>
+            </tbody>
+             <div class="actions"><%= form.submit yield(:button_text) %></div>
+          </table>
 
-          </tbody>
-        </table>
-        <div class="actions"><%= form.submit yield(:button_text) %></div>
-        <%end%>
-      </div>
+      <%end%>
+
+
+    </div>
+
     </div>
   </div>
 </div>

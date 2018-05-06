@@ -24,9 +24,9 @@
             <li class="has-dropdown">
               <%= link_to t("type"), "#", class: "item-nav", data: {toggle: "dropdown"} %>
               <ul class="dropdown list-nav ">
-                <% @type_flower.each do |t| %>
+                <% @kinds.each do |t| %>
                 <li>
-                  <%= link_to t.name, type_path(t), class: "col-md-3" %>
+                  <%= link_to t.name, kind_path(t), class: "col-md-3" %>
                 </li>
                 <% end %>
               </ul>
@@ -46,10 +46,13 @@
         </div>
         <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
           <ul>
+
+            <%= form_tag searchs_url, :method => "get" do %>
             <li class="search">
               <%= form_for :search ,
               url: { controller: "searchs", action: "index" }, method: :get do |f| %>
               <div class="input-group">
+
                 <%= f.text_field :object, value: "", placeholder: t(".search") %>
                 <span class="input-group-btn">
                   <%= f.button name: "commit", type: "submit", class: "btn btn-primary" do %>
@@ -59,6 +62,7 @@
               </div>
               <% end %>
             </li>
+            <%end%>
             <li class="shopping-cart">
               <%= link_to carts_path, class: "cart" do %>
               <span><small class="number-c"><%= many_carts %></small><i class="icon-shopping-cart"></i></span>

@@ -9,6 +9,7 @@
           <table class="table table-bordered" id="" cellspacing="0">
             <thead>
               <tr>
+                <th></th>
                 <th>#</th>
                 <th>Anh</th>
                 <th>Ten</th>
@@ -19,6 +20,7 @@
               </tr>
               <% @products.each_with_index do |product, index| %>
                 <tr>
+                  <td><%= check_box_tag "product_ids[]", product.id %></td>
                   <td><%= create_index params[:page], index, Settings.page %></td>
                   <td class="imge"><%= image_tag product.img.url, class: "img-pr text-center" %></td>
                   <td><%= product.name %></td>

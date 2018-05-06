@@ -1,6 +1,6 @@
   <div class="col-md-4 col-sm-6 text-center animate-box">
     <div class="product">
-      <%= image_tag p.img, alt: "flower", class: "img-product" %>
+      <%= image_tag p.img.url, alt: "flower", class: "img-product" %>
       <div class="product-grid">
         <% if(p.sale != 0) %>
         <span class="sale"><%= t ".sale" %></span>

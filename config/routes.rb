@@ -20,13 +20,12 @@ Rails.application.routes.draw do
         get "/list_post", to: "posts#index"
         get "/about", to: "posts#about"
         get "/products/:id", to: "products#show"
-        post "/order", to: "orders#create"
-
+        post "/commet", to: "comments#create"
 
         resources :users
         resources :sessions
         resources :occasions, only: [:show]
-        resources :types, only: [:show]
+        resources :kinds, only: [:show]
         resources :designs, only: [:show]
         resources :posts, only: [:index, :show]
         resources :contacts, only: [:new, :create]
@@ -38,16 +37,16 @@ Rails.application.routes.draw do
     end
 
     namespace :admin do
-    resources :home, only: [:index]
-    resources :products
-    resources :colors
-    resources :designs
-    resources :occasions
-    resources :type_flowers
-    resources :categories
-    resources :searchs
-    resources :comments
-    get "/index", to: "home#index"
+        resources :home, only: [:index]
+        resources :products
+        resources :colors
+        resources :designs
+        resources :occasions
+        resources :kinds
+        resources :categories
+        resources :searchs
+        resources :comments
+        get "/index", to: "home#index"
     end
 
     namespace :login do

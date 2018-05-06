@@ -31,10 +31,10 @@
           <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <h2><%= @product.name %></h2>
             <p>
-              <%= form_for :session, url: {controller: "carts", action: "create"} do |f| %>
-                <%= f.hidden_field :product_id, value: @product.id %>
-                <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
-              <% end %>
+             <%= form_for :session, url: {controller: "carts", action: "create"}, remote: true do |f| %>
+              <%= f.hidden_field :product_id, value: @product.id %>
+              <%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+            <% end %>
             </p>
           </div>
         </div>
@@ -66,9 +66,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <h2 class="uppercase">Color</h2>
-                    <% @color.each do |c| %>
-                    <p><%= c.name %></p>
-                    <% end %>
+                    <%= @product.colors.map(&:name).join(',') %>
                   </div>
                   <div class="col-md-6">
                     <h2 class="uppercase">Less is more</h2>
@@ -77,9 +75,11 @@
                 </div>
               </div>
             </div>
+
             <div class="fh5co-tab-content tab-content" data-tab-content="2">
               <div class="overflow">
-                <%= render partial: @comments, as: :c %>
+
+                <%= render partial: @comments, as: :c unless @comments.nil? %>
               </div>
               <% if logged_in? %>
               <div class="col-md-10 col-md-offset-1">
@@ -92,6 +92,7 @@
                     <% end %>
                     <%= f.text_area :content, size: "50x5", class: "content-com" %>
                     <%= f.submit "Comment", class: "subcomment" %>
+
                   </div>
                 <% end %>
               </div>

@@ -1,6 +1,6 @@
 10.times do |n|
   name = Faker::Name.name
-  email = "user#{n+1}@gmail.com"
+  email = "admin@gmail.com"
   password = "password"
   address = "#{n+1} home"
   phone = "0163489551#{n+1}"
@@ -10,7 +10,8 @@
       password: password,
       password_confirmation: password,
       address: address,
-      phone: phone
+      phone: phone,
+      is_admin: true
     )
 end
 
@@ -74,22 +75,7 @@ end
   Color.create(
     name: Faker::Color.color_name
     )
-  TypeFlower.create(
-      name: Faker::Name.name
-    )
-  ProductColor.create(
-    product_id: Faker::Number.between(1, 10),
-    color_id: Faker::Number.between(1, 3),
-    )
+
 end
 
-100.times do |n|
- ProductOccasion.create(
-    product_id: Faker::Number.between(1, 100),
-    occasion_id: Faker::Number.between(1, 3),
-    )
- ProductType.create(
-    product_id: Faker::Number.between(1, 100),
-    type_flower_id: Faker::Number.between(1, 3),
-    )
-end
+

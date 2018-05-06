@@ -1,17 +1,11 @@
 class Product < ApplicationRecord
-  scope :name_like, -> name {where("name LIKE ?", "%#{name}%")}
-
-  has_many :product_colors, dependent: :destroy
-  has_many :colors, through: :product_colors
-  has_many :product_occasions, dependent: :destroy
-  has_many :occasions, through: :product_occasions
-  has_many :product_types, dependent: :destroy
-  has_many :ratings, dependent: :destroy
-  has_many :types, through: :product_types
+  mount_uploader :img, PictureUploader
+  has_and_belongs_to_many :colors
+  has_and_belongs_to_many :occasions
+  has_and_belongs_to_many :kinds
   has_many :ratings, dependent: :destroy
   has_many :order_items, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :color_products, through: :product_colors, source: :color
 
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true
@@ -21,12 +15,13 @@ class Product < ApplicationRecord
   validates :view, presence: true
   validates :design_id, presence: true
 
+
   def picture_size
     if img.size > 5.megabytes
       errors.add(:img, "Anh phai nho hon 5MB")
     end
   end
- def self.search search, id
+ def self.search search
     if search
       where(["name LIKE ?", "%#{search}"])
     else

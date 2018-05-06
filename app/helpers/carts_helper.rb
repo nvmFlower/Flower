@@ -1,5 +1,6 @@
 module CartsHelper
 
+
   def add_carts id_product
     id = id_product
     session[:order_items][id] ||= 0

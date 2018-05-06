@@ -20,18 +20,25 @@ class ApplicationController < ActionController::Base
 
   def read_menu
     @occasions = Occasion.all
-    @type_flower = TypeFlower.all
+    @kind = Kind.all
     @design = Design.all
+    @order_item = current_order.order_items.new
     @search = Product.ransack params[:q]
   end
-  def method_name
 
+  def current_cart
+    @cart = Cart.find(session[:cart_id])
+    rescue ActiveRecord::RecordNotFound
+      @cart = Cart.create
+      session[:cart_id] = @cart.id
   end
+
   def logged_in_user
     unless logged_in?
       flash[:danger] = "Please log in."
     end
   end
+
   def create_session
     session[:order_items] ||= Hash.new
     session[:time] ||= Hash.new

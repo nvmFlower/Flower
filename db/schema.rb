@@ -12,6 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20180422112315) do
 
+  create_table "bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "total_money"
+    t.date "date_order"
+    t.date "date_delivery"
+    t.boolean "status", default: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bills_on_user_id"
+  end
+
   create_table "colors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -33,6 +44,17 @@ ActiveRecord::Schema.define(version: 20180422112315) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "detail_bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "count"
+    t.integer "price"
+    t.bigint "bill_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_detail_bills_on_bill_id"
+    t.index ["product_id"], name: "index_detail_bills_on_product_id"
   end
 
   create_table "occasions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -94,11 +116,11 @@ ActiveRecord::Schema.define(version: 20180422112315) do
 
   create_table "product_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "product_id"
-    t.bigint "type_flower_id"
+    t.bigint "type_flowers_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_product_types_on_product_id"
-    t.index ["type_flower_id"], name: "index_product_types_on_type_flower_id"
+    t.index ["type_flowers_id"], name: "index_product_types_on_type_flowers_id"
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -106,13 +128,14 @@ ActiveRecord::Schema.define(version: 20180422112315) do
     t.integer "price"
     t.string "img"
     t.boolean "many_or_not", default: true
-    t.integer "sale", default: 0
+    t.integer "sale"
     t.text "details"
     t.integer "view"
-    t.float "rating", limit: 24, default: 5.0
-    t.integer "design_id"
+    t.integer "rating"
+    t.bigint "design_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["design_id"], name: "index_products_on_design_id"
   end
 
   create_table "ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -152,8 +175,11 @@ ActiveRecord::Schema.define(version: 20180422112315) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bills", "users"
   add_foreign_key "comments", "products"
   add_foreign_key "comments", "users"
+  add_foreign_key "detail_bills", "bills"
+  add_foreign_key "detail_bills", "products"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "users"
@@ -163,7 +189,8 @@ ActiveRecord::Schema.define(version: 20180422112315) do
   add_foreign_key "product_occasions", "occasions"
   add_foreign_key "product_occasions", "products"
   add_foreign_key "product_types", "products"
-  add_foreign_key "product_types", "type_flowers"
+  add_foreign_key "product_types", "type_flowers", column: "type_flowers_id"
+  add_foreign_key "products", "designs"
   add_foreign_key "ratings", "products"
   add_foreign_key "ratings", "users"
   add_foreign_key "sales", "occasions"

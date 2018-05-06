@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
   def create
+    (byebug)
     @order = Order.new(params_order)
     @order.date_order = Time.now
     if @order.save
